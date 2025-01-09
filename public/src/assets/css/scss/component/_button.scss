@@ -48,4 +48,22 @@
             font: v.$btn2-600;
         }
     }
+
+    &.hasImage{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        padding: 12px 14px;
+        border: unset;
+        box-shadow: 0 1px 2px 0 rgba(v.$black-950, 0.15);
+        i{
+            font: 600 50px/140% v.$font-main;
+        }
+        span{
+            font: v.$btn7-700;
+            color: v.$black-600;
+            letter-spacing: -0.25px;
+            margin-top: -5px;
+        }
+    }
 }

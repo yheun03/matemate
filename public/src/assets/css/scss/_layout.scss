@@ -14,6 +14,9 @@
     box-shadow: 0 0 10px 0 rgba(v.$black-950, 0.1);
     display: grid;
     grid-template-rows: auto 1fr auto;
+    & > *{
+        max-width: inherit;
+    }
 }
 
 .btn-wrap{
@@ -37,4 +40,8 @@
 }
 .main{
     background-color: v.$secondary-50;
+}
+
+section{
+    padding-top: 20px;
 }

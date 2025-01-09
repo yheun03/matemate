@@ -314,6 +314,23 @@ http://scripts.sil.org/OFL
 .btn.ts-20 {
   font: 600 20px/26px "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
+.btn.hasImage {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  padding: 12px 14px;
+  border: unset;
+  box-shadow: 0 1px 2px 0 rgba(17, 17, 17, 0.15);
+}
+.btn.hasImage i {
+  font: 600 50px/140% "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+.btn.hasImage span {
+  font: 700 12px/140% "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  color: #5d5d5d;
+  letter-spacing: -0.25px;
+  margin-top: -5px;
+}
 
 .logo {
   font: 400 24px/20px "BagelFatOne";
@@ -381,6 +398,88 @@ http://scripts.sil.org/OFL
   color: #4f4f4f;
 }
 
+.result-image {
+  width: 100%;
+  padding-inline: 20px;
+  position: relative;
+}
+.result-image img {
+  width: 100%;
+  border: 1px solid #ccd0d5;
+  border-radius: 10px;
+}
+.result-image p.title {
+  margin-inline: 2px;
+  font: 600 18px/26px "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-weight: 700;
+  color: #111111;
+  margin-bottom: 8px;
+}
+.result-match {
+  position: relative;
+  padding: 14px 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 2px 0 rgba(17, 17, 17, 0.15);
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+.result-match-wrap {
+  padding-inline: 20px;
+  margin-top: 24px;
+}
+.result-match p.title {
+  font: 600 18px/26px "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-weight: 500;
+  color: #111111;
+}
+.result-match p.title span {
+  font-weight: 700;
+}
+.result-match > div {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 93px 1fr;
+  align-items: center;
+  gap: 30px;
+  margin-top: 16px;
+}
+.result-match > div img {
+  max-width: 100%;
+  aspect-ratio: 1;
+  border-radius: 10px;
+  object-fit: contain;
+}
+.result-match > div .rm-summary ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px 4px;
+  flex-wrap: wrap;
+}
+.result-match > div .rm-summary li {
+  padding: 3px 11px;
+  background-color: #dde9fc;
+  border-radius: 20px;
+  font: 400 14px/140% "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  color: #111111;
+}
+.result-match > div .rm-summary li::before {
+  content: "#";
+}
+.result-match .btn-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+.result-match .btn-wrap .btn {
+  height: unset;
+  min-width: 170px;
+  border-color: #b6bbc3;
+}
+
 .full {
   width: 100%;
   flex: unset !important;
@@ -417,6 +516,9 @@ header .btn-wrap .btn.ic-bell::before {
   height: 28px !important;
   aspect-ratio: 1;
   background: url("../../../src/assets/icons/28/ic-bell.svg") center no-repeat;
+}
+header:empty {
+  display: none;
 }
 
 footer {
@@ -478,6 +580,9 @@ footer .btn-wrap {
   display: grid;
   grid-template-rows: auto 1fr auto;
 }
+#root > * {
+  max-width: inherit;
+}
 
 .btn-wrap {
   display: flex;
@@ -502,6 +607,10 @@ footer .btn-wrap {
   background-color: #f6f6f7;
 }
 
+section {
+  padding-top: 20px;
+}
+
 .insertMyDataSuccese {
   padding: 80px 12px 36px;
   height: 100%;
@@ -509,4 +618,16 @@ footer .btn-wrap {
   flex-direction: column;
   gap: 48px;
   align-items: center;
+}
+
+.main-nav {
+  padding-inline: 20px;
+  margin-block: 24px;
+  display: flex;
+  gap: 10px;
+}
+.main-nav a {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }/*# sourceMappingURL=style.css.map */
