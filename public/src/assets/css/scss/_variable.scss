@@ -1,0 +1,102 @@
+@charset 'utf-8';
+
+$url: '/src/assets/';
+$url-icon: $url + 'icons/';
+
+$red: red;
+
+// 폰트들
+$font-main: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+
+    // 제목
+    $h1-700             : 700 28px/32px $font-main;
+    $h2-600             : 600 32px/45.2px $font-main;
+    $h4-600             : 700 26px/140% $font-main;
+
+    // 본문
+    $b1-400             : 400 16px/26px $font-main;
+
+    // 버튼
+    $btn1-600           : 700 36px/45px $font-main;
+    $btn2-600           : 600 20px/26px $font-main;
+    $btn3-600           : 600 18px/26px $font-main;
+    $btn5-600           : 600 15px/140% $font-main;
+
+    // 캡션
+    $c1-500             : 500 12px/120% $font-main;
+
+// 색상들
+    // 기본색상
+        $white          : #ffffff;
+
+    // 강조색상
+        $primary-50     : #f0f5fe;
+        $primary-100    : #dde9fc;
+        $primary-200    : #c2d9fb;
+        $primary-300    : #98c1f8;
+        $primary-400    : #68a1f2;
+        $primary-500    : #447eed;  // 주 컬러
+        $primary-600    : #2f60e1;
+        $primary-700    : #264ccf;
+        $primary-800    : #253fa8;
+        $primary-900    : #233985;
+        $primary-950    : #1a2551;
+        
+    // 강조색상 - 서브
+        $secondary-50   : #f6f6f7;
+        $secondary-100  : #eef0f1;
+        $secondary-200  : #e0e3e5;
+        $secondary-300  : #ccd0d5;
+        $secondary-400  : #b6bbc3;
+        $secondary-500  : #a2a8b2;
+        $secondary-600  : #858a97;  // 주 컬러
+        $secondary-700  : #797d89;
+        $secondary-800  : #636670;
+        $secondary-900  : #53565c;
+        $secondary-950  : #303136;
+    
+    // 블랙
+        $black-50       : #f6f6f6;
+        $black-100      : #e7e7e7;
+        $black-200      : #d1d1d1;
+        $black-300      : #b0b0b0;
+        $black-400      : #888888;
+        $black-500      : #6d6d6d;
+        $black-600      : #5d5d5d;
+        $black-700      : #4f4f4f;
+        $black-800      : #454545;
+        $black-900      : #3d3d3d;
+        $black-950      : #111111;  // 주 컬러
+
+    // 상태
+        $success        : #32C771;
+        $warning        : #FFAA00;
+        $error          : #EB5757;
+
+        $set-black-800  : invert(24%) sepia(0%) saturate(43%) hue-rotate(143deg) brightness(94%) contrast(83%);
+
+
+        
+// 높이
+$height-header: 50px;
+    
+// 기타
+$delay          : 0.2s;
+
+
+    @mixin trueSize($setSize){
+        display: block;
+        width: $setSize + px !important;
+        height: $setSize + px !important;
+        aspect-ratio: 1;
+    }
+
+
+    @mixin setIcon($setIcon, $setSize){
+        @include trueSize($setSize);
+        background: url($url-icon + '#{$setSize}/#{$setIcon}') center no-repeat;
+    }
+
+    @mixin setBg($setIcon, $setSize){
+        background: url($url-icon + '#{$setSize}/#{$setIcon}') center no-repeat;
+    }

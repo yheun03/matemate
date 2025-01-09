@@ -1,0 +1,67 @@
+@charset 'utf-8';
+@use 'index' as v;
+
+@use 'component/input';
+@use 'component/button';
+
+.dscpt-information{
+    position: relative;
+    font: v.$b1-400;
+    color: v.$black-600;
+    padding-top: 30px;
+    margin-top: 16px; // 임시로 넣은거
+    // 나중에 after의 배경으로 아이콘 집어넣기
+    &::before{
+        content: "";
+        position: absolute;
+        @include v.setIcon('ic-arrow-right', 18); // 임시로 넣은거
+        background-color: red;
+        top: 3px;
+        left: 0;
+    }
+    &::after{
+        content: "정보";
+        position: absolute;
+        font: v.$btn3-600;
+        color: v.$black-900;
+        top: 0;
+        left: 20px;
+    }
+}
+
+.status-noti{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1;
+    padding-top: 70px;
+    div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 8px;
+        margin-top: 98px;
+        p{
+            text-align: center;
+            color: v.$black-950;
+            &.title{
+                flex: unset;
+                font: v.$h4-600;
+                span{
+                    color: v.$error;
+                }
+            }
+            &.dscpt{
+                font: v.$b1-400;
+                color: v.$black-700;
+            }
+        }
+    }
+}
+
+.full{
+    width: 100%;
+    flex: unset !important;
+}

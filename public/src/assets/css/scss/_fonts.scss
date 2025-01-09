@@ -1,0 +1,73 @@
+@charset 'utf-8';
+@use 'index' as v;
+
+/*
+Copyright (c) 2021 Kil Hyung-jin, with Reserved Font Name Pretendard.
+https://github.com/orioncactus/pretendard
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+http://scripts.sil.org/OFL
+*/
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 900;
+	font-display: swap;
+	src: local('Pretendard Black'), url(v.$url+"font/Pretendard/Pretendard-Black.otf") format('opentype');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 800;
+	font-display: swap;
+	src: local('Pretendard ExtraBold'), url(v.$url+"font/Pretendard/Pretendard-ExtraBold.otf") format('opentype');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 700;
+	font-display: swap;
+	src: local('Pretendard Bold'), url(v.$url+"font/Pretendard/Pretendard-Bold.otf") format('opentype');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 600;
+	font-display: swap;
+	src: local('Pretendard SemiBold'), url(v.$url+"font/Pretendard/Pretendard-SemiBold.otf") format('opentype');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 500;
+	font-display: swap;
+	src: local('Pretendard Medium'), url(v.$url+"font/Pretendard/Pretendard-Medium.otf") format('opentype');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 400;
+	font-display: swap;
+	src: local('Pretendard Regular'), url(v.$url+"font/Pretendard/Pretendard-Regular.otf") format('opentype');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 300;
+	font-display: swap;
+	src: local('Pretendard Light'), url(v.$url+"font/Pretendard/Pretendard-Light.otf") format('opentype');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 200;
+	font-display: swap;
+	src: local('Pretendard ExtraLight'), url(v.$url+"font/Pretendard/Pretendard-ExtraLight.otf") format('opentype');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 100;
+	font-display: swap;
+	src: local('Pretendard Thin'), url(v.$url+"font/Pretendard/Pretendard-Thin.otf") format('opentype');
+}
