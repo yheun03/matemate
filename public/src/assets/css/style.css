@@ -66,61 +66,61 @@ http://scripts.sil.org/OFL
   font-family: "Pretendard";
   font-weight: 900;
   font-display: swap;
-  src: local("Pretendard Black"), url("/src/assets/fonts/Pretendard/Pretendard-Black.otf") format("opentype");
+  src: local("Pretendard Black"), url("../../../src/assets/fonts/Pretendard/Pretendard-Black.otf") format("opentype");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 800;
   font-display: swap;
-  src: local("Pretendard ExtraBold"), url("/src/assets/fonts/Pretendard/Pretendard-ExtraBold.otf") format("opentype");
+  src: local("Pretendard ExtraBold"), url("../../../src/assets/fonts/Pretendard/Pretendard-ExtraBold.otf") format("opentype");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 700;
   font-display: swap;
-  src: local("Pretendard Bold"), url("/src/assets/fonts/Pretendard/Pretendard-Bold.otf") format("opentype");
+  src: local("Pretendard Bold"), url("../../../src/assets/fonts/Pretendard/Pretendard-Bold.otf") format("opentype");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 600;
   font-display: swap;
-  src: local("Pretendard SemiBold"), url("/src/assets/fonts/Pretendard/Pretendard-SemiBold.otf") format("opentype");
+  src: local("Pretendard SemiBold"), url("../../../src/assets/fonts/Pretendard/Pretendard-SemiBold.otf") format("opentype");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 500;
   font-display: swap;
-  src: local("Pretendard Medium"), url("/src/assets/fonts/Pretendard/Pretendard-Medium.otf") format("opentype");
+  src: local("Pretendard Medium"), url("../../../src/assets/fonts/Pretendard/Pretendard-Medium.otf") format("opentype");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 400;
   font-display: swap;
-  src: local("Pretendard Regular"), url("/src/assets/fonts/Pretendard/Pretendard-Regular.otf") format("opentype");
+  src: local("Pretendard Regular"), url("../../../src/assets/fonts/Pretendard/Pretendard-Regular.otf") format("opentype");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 300;
   font-display: swap;
-  src: local("Pretendard Light"), url("/src/assets/fonts/Pretendard/Pretendard-Light.otf") format("opentype");
+  src: local("Pretendard Light"), url("../../../src/assets/fonts/Pretendard/Pretendard-Light.otf") format("opentype");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 200;
   font-display: swap;
-  src: local("Pretendard ExtraLight"), url("/src/assets/fonts/Pretendard/Pretendard-ExtraLight.otf") format("opentype");
+  src: local("Pretendard ExtraLight"), url("../../../src/assets/fonts/Pretendard/Pretendard-ExtraLight.otf") format("opentype");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 100;
   font-display: swap;
-  src: local("Pretendard Thin"), url("/src/assets/fonts/Pretendard/Pretendard-Thin.otf") format("opentype");
+  src: local("Pretendard Thin"), url("../../../src/assets/fonts/Pretendard/Pretendard-Thin.otf") format("opentype");
 }
 @font-face {
   font-family: "BagelFatOne";
   font-weight: 400;
   font-display: swap;
-  src: local("BagelFatOne-Regular"), url("/src/assets/fonts/BagelFatOne/BagelFatOne-Regular.ttf") format("truetype");
+  src: local("BagelFatOne-Regular"), url("../../../src/assets/fonts/BagelFatOne/BagelFatOne-Regular.ttf") format("truetype");
 }
 .ipt {
   display: flex;
@@ -151,7 +151,7 @@ http://scripts.sil.org/OFL
   color: #454545;
 }
 .ipt input[type=date] {
-  background: url("/src/assets/icons/20/ic-input-calendar.svg") center no-repeat;
+  background: url("../../../src/assets/icons/20/ic-input-calendar.svg") center no-repeat;
   background-position: 16px;
   padding-left: 50px;
 }
@@ -165,7 +165,7 @@ http://scripts.sil.org/OFL
   color: transparent;
 }
 .ipt select {
-  background: url("/src/assets/icons/16/ic-input-arrow-bottom.svg") center no-repeat;
+  background: url("../../../src/assets/icons/16/ic-input-arrow-bottom.svg") center no-repeat;
   background-position: right 16px center;
   cursor: pointer;
 }
@@ -251,7 +251,7 @@ http://scripts.sil.org/OFL
   width: 22px !important;
   height: 22px !important;
   aspect-ratio: 1;
-  background: url("/src/assets/icons/22/ic-radio.svg") center no-repeat;
+  background: url("../../../src/assets/icons/22/ic-radio.svg") center no-repeat;
   margin-left: auto;
 }
 .ipt label.type-radio:has(input:checked) {
@@ -263,7 +263,7 @@ http://scripts.sil.org/OFL
   width: 22px !important;
   height: 22px !important;
   aspect-ratio: 1;
-  background: url("/src/assets/icons/22/ic-radio-active.svg") center no-repeat;
+  background: url("../../../src/assets/icons/22/ic-radio-active.svg") center no-repeat;
 }
 .ipt > div:has(.type-chip) {
   display: flex;
@@ -309,7 +309,7 @@ http://scripts.sil.org/OFL
   width: 18px !important;
   height: 18px !important;
   aspect-ratio: 1;
-  background: url("/src/assets/icons/18/ic-error.svg") center no-repeat;
+  background: url("../../../src/assets/icons/18/ic-error.svg") center no-repeat;
 }
 .btn.ts-20 {
   font: 600 20px/26px "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
@@ -335,7 +335,7 @@ http://scripts.sil.org/OFL
   width: 18px !important;
   height: 18px !important;
   aspect-ratio: 1;
-  background: url("/src/assets/icons/18/ic-arrow-right") center no-repeat;
+  background: url("../../../src/assets/icons/18/ic-arrow-right") center no-repeat;
   background-color: red;
   top: 3px;
   left: 0;
@@ -409,14 +409,14 @@ header .btn-wrap .btn.ic-setting::before {
   width: 28px !important;
   height: 28px !important;
   aspect-ratio: 1;
-  background: url("/src/assets/icons/28/ic-setting.svg") center no-repeat;
+  background: url("../../../src/assets/icons/28/ic-setting.svg") center no-repeat;
 }
 header .btn-wrap .btn.ic-bell::before {
   display: block;
   width: 28px !important;
   height: 28px !important;
   aspect-ratio: 1;
-  background: url("/src/assets/icons/28/ic-bell.svg") center no-repeat;
+  background: url("../../../src/assets/icons/28/ic-bell.svg") center no-repeat;
 }
 
 footer {
