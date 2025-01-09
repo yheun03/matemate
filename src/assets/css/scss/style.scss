@@ -4,3 +4,12 @@
 @use 'fonts';
 @use 'common';
 @use 'layout';
+
+.insertMyDataSuccese{
+    padding: 80px 12px 36px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    align-items: center;
+}

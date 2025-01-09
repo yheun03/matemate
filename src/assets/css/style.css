@@ -276,13 +276,22 @@ http://scripts.sil.org/OFL
   border: 1px solid #d1d1d1;
   background-color: #ffffff;
   font: 400 16px/26px "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  line-height: 140%;
+  letter-spacing: -0.25px;
   color: #111111;
-  letter-spacing: -0.01em;
 }
 .btn.bg-primary {
   background-color: #447eed;
   border-color: #447eed;
   color: #ffffff;
+}
+.btn.bg-secondary {
+  background-color: #eef0f1;
+  border-color: #eef0f1;
+  color: #888888;
+}
+.btn.ts-20 {
+  font: 600 20px/26px "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
 
 .dscpt-information {
@@ -335,6 +344,18 @@ http://scripts.sil.org/OFL
   margin-top: 20px;
 }
 
+footer {
+  padding: 10px 24px 20px;
+}
+footer .btn-wrap {
+  width: 100%;
+  gap: 10px 20px;
+  flex-direction: column;
+}
+footer .btn-wrap .btn {
+  width: 100%;
+}
+
 .rm-match-wrap .title {
   flex: 0 0 162px;
   font: 700 28px/32px "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
@@ -360,11 +381,21 @@ http://scripts.sil.org/OFL
   align-content: center;
 }
 
+.swiper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
 #root {
+  position: relative;
   max-width: 420px;
   height: 100dvh;
   margin: auto;
   box-shadow: 0 0 10px 0 rgba(17, 17, 17, 0.1);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
 .btn-wrap {
@@ -381,4 +412,13 @@ http://scripts.sil.org/OFL
 
 .hasScroll {
   overflow-y: auto;
+}
+
+.insertMyDataSuccese {
+  padding: 80px 12px 36px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  align-items: center;
 }/*# sourceMappingURL=style.css.map */
