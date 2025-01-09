@@ -2,7 +2,10 @@
 @use '../index' as v;
 
 .btn{
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     position: relative;
     height: 58px;
     padding: 8px 24px;
@@ -25,6 +28,17 @@
             background-color: v.$secondary-100;
             border-color: v.$secondary-100;
             color: v.$black-400;
+        }
+    }
+
+    &.cp{
+        &-naver{
+            background-color: #03C75A;
+            border-color: #03C75A;
+            &::before{
+                content: "";
+                @include v.setIcon('ic-error.svg', 18) // 28 아이콘 추가
+            }
         }
     }
 

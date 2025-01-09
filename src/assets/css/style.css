@@ -267,7 +267,10 @@ http://scripts.sil.org/OFL
 }
 
 .btn {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   position: relative;
   height: 58px;
   padding: 8px 24px;
@@ -289,6 +292,18 @@ http://scripts.sil.org/OFL
   background-color: #eef0f1;
   border-color: #eef0f1;
   color: #888888;
+}
+.btn.cp-naver {
+  background-color: #03C75A;
+  border-color: #03C75A;
+}
+.btn.cp-naver::before {
+  content: "";
+  display: block;
+  width: 18px !important;
+  height: 18px !important;
+  aspect-ratio: 1;
+  background: url("/src/assets/icons/18/ic-error.svg") center no-repeat;
 }
 .btn.ts-20 {
   font: 600 20px/26px "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
@@ -334,6 +349,7 @@ http://scripts.sil.org/OFL
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   gap: 8px;
   margin-top: 98px;
 }
@@ -345,9 +361,17 @@ http://scripts.sil.org/OFL
   flex: unset;
   font: 700 26px/140% "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
+.status-noti div p.title span {
+  color: #EB5757;
+}
 .status-noti div p.dscpt {
   font: 400 16px/26px "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   color: #4f4f4f;
+}
+
+.full {
+  width: 100%;
+  flex: unset !important;
 }
 
 footer {
@@ -357,9 +381,6 @@ footer .btn-wrap {
   width: 100%;
   gap: 10px 20px;
   flex-direction: column;
-}
-footer .btn-wrap .btn {
-  width: 100%;
 }
 
 .rm-match-wrap .title {
@@ -417,6 +438,9 @@ footer .btn-wrap .btn {
   display: flex;
   align-items: center;
   gap: 8px;
+}
+.btn-wrap:has(.full) {
+  flex-wrap: wrap;
 }
 
 .col-2 {

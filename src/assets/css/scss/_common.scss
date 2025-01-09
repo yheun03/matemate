@@ -30,29 +30,38 @@
 }
 
 .status-noti{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  flex: 1;
-  padding-top: 70px;
-  div{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    margin-top: 98px;
-    p{
-      text-align: center;
-      color: v.$black-950;
-      &.title{
-        flex: unset;
-        font: v.$h4-600;
-      }
-      &.dscpt{
-        font: v.$b1-400;
-        color: v.$black-700;
-      }
+    flex-direction: column;
+    flex: 1;
+    padding-top: 70px;
+    div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 8px;
+        margin-top: 98px;
+        p{
+            text-align: center;
+            color: v.$black-950;
+            &.title{
+                flex: unset;
+                font: v.$h4-600;
+                span{
+                    color: v.$error;
+                }
+            }
+            &.dscpt{
+                font: v.$b1-400;
+                color: v.$black-700;
+            }
+        }
     }
-  }
+}
+
+.full{
+    width: 100%;
+    flex: unset !important;
 }
