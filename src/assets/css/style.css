@@ -66,55 +66,61 @@ http://scripts.sil.org/OFL
   font-family: "Pretendard";
   font-weight: 900;
   font-display: swap;
-  src: local("Pretendard Black"), url("/src/assets/font/Pretendard/Pretendard-Black.otf") format("opentype");
+  src: local("Pretendard Black"), url("/src/assets/fonts/Pretendard/Pretendard-Black.otf") format("opentype");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 800;
   font-display: swap;
-  src: local("Pretendard ExtraBold"), url("/src/assets/font/Pretendard/Pretendard-ExtraBold.otf") format("opentype");
+  src: local("Pretendard ExtraBold"), url("/src/assets/fonts/Pretendard/Pretendard-ExtraBold.otf") format("opentype");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 700;
   font-display: swap;
-  src: local("Pretendard Bold"), url("/src/assets/font/Pretendard/Pretendard-Bold.otf") format("opentype");
+  src: local("Pretendard Bold"), url("/src/assets/fonts/Pretendard/Pretendard-Bold.otf") format("opentype");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 600;
   font-display: swap;
-  src: local("Pretendard SemiBold"), url("/src/assets/font/Pretendard/Pretendard-SemiBold.otf") format("opentype");
+  src: local("Pretendard SemiBold"), url("/src/assets/fonts/Pretendard/Pretendard-SemiBold.otf") format("opentype");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 500;
   font-display: swap;
-  src: local("Pretendard Medium"), url("/src/assets/font/Pretendard/Pretendard-Medium.otf") format("opentype");
+  src: local("Pretendard Medium"), url("/src/assets/fonts/Pretendard/Pretendard-Medium.otf") format("opentype");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 400;
   font-display: swap;
-  src: local("Pretendard Regular"), url("/src/assets/font/Pretendard/Pretendard-Regular.otf") format("opentype");
+  src: local("Pretendard Regular"), url("/src/assets/fonts/Pretendard/Pretendard-Regular.otf") format("opentype");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 300;
   font-display: swap;
-  src: local("Pretendard Light"), url("/src/assets/font/Pretendard/Pretendard-Light.otf") format("opentype");
+  src: local("Pretendard Light"), url("/src/assets/fonts/Pretendard/Pretendard-Light.otf") format("opentype");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 200;
   font-display: swap;
-  src: local("Pretendard ExtraLight"), url("/src/assets/font/Pretendard/Pretendard-ExtraLight.otf") format("opentype");
+  src: local("Pretendard ExtraLight"), url("/src/assets/fonts/Pretendard/Pretendard-ExtraLight.otf") format("opentype");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 100;
   font-display: swap;
-  src: local("Pretendard Thin"), url("/src/assets/font/Pretendard/Pretendard-Thin.otf") format("opentype");
+  src: local("Pretendard Thin"), url("/src/assets/fonts/Pretendard/Pretendard-Thin.otf") format("opentype");
+}
+@font-face {
+  font-family: "BagelFatOne";
+  font-weight: 400;
+  font-display: swap;
+  src: local("BagelFatOne-Regular"), url("/src/assets/fonts/BagelFatOne/BagelFatOne-Regular.ttf") format("truetype");
 }
 .ipt {
   display: flex;
@@ -309,6 +315,12 @@ http://scripts.sil.org/OFL
   font: 600 20px/26px "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
 
+.logo {
+  font: 400 24px/20px "BagelFatOne";
+  letter-spacing: -0.5px;
+  color: #447eed;
+}
+
 .dscpt-information {
   position: relative;
   font: 400 16px/26px "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
@@ -372,6 +384,39 @@ http://scripts.sil.org/OFL
 .full {
   width: 100%;
   flex: unset !important;
+}
+
+header {
+  padding: 9px 20px;
+  display: flex;
+  align-items: center;
+}
+header .btn-wrap {
+  margin-left: auto;
+}
+header .btn-wrap .btn {
+  height: unset;
+  border: unset;
+  padding: unset;
+  background-color: unset;
+}
+header .btn-wrap .btn::before {
+  content: "";
+  filter: invert(0%) sepia(0%) saturate(6296%) hue-rotate(155deg) brightness(94%) contrast(87%);
+}
+header .btn-wrap .btn.ic-setting::before {
+  display: block;
+  width: 28px !important;
+  height: 28px !important;
+  aspect-ratio: 1;
+  background: url("/src/assets/icons/28/ic-setting.svg") center no-repeat;
+}
+header .btn-wrap .btn.ic-bell::before {
+  display: block;
+  width: 28px !important;
+  height: 28px !important;
+  aspect-ratio: 1;
+  background: url("/src/assets/icons/28/ic-bell.svg") center no-repeat;
 }
 
 footer {
@@ -451,6 +496,10 @@ footer .btn-wrap {
 
 .hasScroll {
   overflow-y: auto;
+}
+
+.main {
+  background-color: #f6f6f7;
 }
 
 .insertMyDataSuccese {

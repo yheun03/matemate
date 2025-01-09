@@ -4,6 +4,12 @@
 @use 'component/input';
 @use 'component/button';
 
+.logo{
+    font: 400 24px/20px "BagelFatOne";
+    letter-spacing: -0.5px;
+    color: v.$primary-500;
+}
+
 .dscpt-information{
     position: relative;
     font: v.$b1-400;

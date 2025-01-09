@@ -1,2 +1,29 @@
 @charset 'utf-8';
 @use '../index' as v;
+
+header{
+    padding: 9px 20px;
+    display: flex;
+    align-items: center;
+    .btn-wrap{
+        margin-left: auto;
+        .btn{
+            height: unset;
+            border: unset;
+            padding: unset;
+            background-color: unset;
+            &::before{
+                content: "";
+                filter: v.$set-black-950;
+            }
+            &.ic{
+                &-setting::before{
+                    @include v.setIcon('ic-setting.svg', 28);
+                }
+                &-bell::before{
+                    @include v.setIcon('ic-bell.svg', 28);
+                }
+            }
+        }
+    }
+}
