@@ -29,25 +29,30 @@
     }
 }
 
-
-.container {
-    position: relative;
-    width: 500px;
-    margin: 50px auto;
+.status-noti{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex: 1;
+  padding-top: 70px;
+  div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 98px;
+    p{
+      text-align: center;
+      color: v.$black-950;
+      &.title{
+        flex: unset;
+        font: v.$h4-600;
+      }
+      &.dscpt{
+        font: v.$b1-400;
+        color: v.$black-700;
+      }
+    }
   }
-
-  .slider-label {
-    position: absolute;
-    transform: translateY(-17%);
-    font-size: 14px;
-    color: black;
-    background: transparent;
-    text-align: center;
-    width: 71px;
-    pointer-events: none;
-  }
-
-  .slider {
-    width: 100%;
-    margin-top: 20px;
-  }
+}

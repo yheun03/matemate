@@ -31,6 +31,18 @@
                 align-content: center;
             }
         }
+
+        .type-radio{
+            & + textarea{
+                display: none;
+                height: 25dvh;
+                margin-top: 12px;
+                padding-inline: 8px;
+            }
+            &:has(input:checked) + textarea{
+                display: block;
+            }
+        }
     }
 }
 .swiper{

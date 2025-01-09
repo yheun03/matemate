@@ -322,26 +322,32 @@ http://scripts.sil.org/OFL
   left: 20px;
 }
 
-.container {
-  position: relative;
-  width: 500px;
-  margin: 50px auto;
+.status-noti {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex: 1;
+  padding-top: 70px;
 }
-
-.slider-label {
-  position: absolute;
-  transform: translateY(-17%);
-  font-size: 14px;
-  color: black;
-  background: transparent;
+.status-noti div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 98px;
+}
+.status-noti div p {
   text-align: center;
-  width: 71px;
-  pointer-events: none;
+  color: #111111;
 }
-
-.slider {
-  width: 100%;
-  margin-top: 20px;
+.status-noti div p.title {
+  flex: unset;
+  font: 700 26px/140% "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+.status-noti div p.dscpt {
+  font: 400 16px/26px "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  color: #4f4f4f;
 }
 
 footer {
@@ -379,6 +385,15 @@ footer .btn-wrap .btn {
 }
 .rm-match-section > div:has(.ipt:only-child) {
   align-content: center;
+}
+.rm-match-section .type-radio + textarea {
+  display: none;
+  height: 25dvh;
+  margin-top: 12px;
+  padding-inline: 8px;
+}
+.rm-match-section .type-radio:has(input:checked) + textarea {
+  display: block;
 }
 
 .swiper {
