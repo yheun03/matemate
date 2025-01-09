@@ -1,0 +1,56 @@
+@charset 'utf-8';
+@use '../index' as v;
+
+.list{
+    &-alert{
+        padding-inline: 20px;
+        min-height: 100%;
+        li{
+            margin-bottom: 10px;
+        }
+        p.date{
+            font: v.$btn5-600;
+            color: v.$black-950;
+            padding: 10px 4px;
+        }
+        a{
+            display: block;
+            font: v.$b4-500;
+            color: v.$black-950;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid v.$black-100;
+        }
+        ul{
+            & + p{
+                font: v.$b4-500;
+                color: v.$black-300;
+                text-align: center;
+                margin-top: 60px;
+            }
+            &:empty{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                gap: 14px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                & + p{
+                    display: none;
+                }
+                &::before{
+                    content: "";
+                    @include v.setIcon("ic-nodata-alert.svg", 100);
+                }
+                &::after{
+                    content: "새로운 알림이 없습니다.";
+                    font: v.$b4-500;
+                    color: v.$black-300;
+                }
+            }
+        }
+    }
+}

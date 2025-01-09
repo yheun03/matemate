@@ -490,32 +490,46 @@ header {
   display: flex;
   align-items: center;
 }
-header .btn-wrap {
-  margin-left: auto;
-}
-header .btn-wrap .btn {
+header .btn {
   height: unset;
   border: unset;
   padding: unset;
   background-color: unset;
 }
-header .btn-wrap .btn::before {
+header .btn-wrap {
+  margin-left: auto;
+}
+header .btn::before {
   content: "";
   filter: invert(0%) sepia(0%) saturate(6296%) hue-rotate(155deg) brightness(94%) contrast(87%);
 }
-header .btn-wrap .btn.ic-setting::before {
+header .btn.ic-setting::before {
   display: block;
   width: 28px !important;
   height: 28px !important;
   aspect-ratio: 1;
   background: url("../../../src/assets/icons/28/ic-setting.svg") center no-repeat;
 }
-header .btn-wrap .btn.ic-bell::before {
+header .btn.ic-bell::before {
   display: block;
   width: 28px !important;
   height: 28px !important;
   aspect-ratio: 1;
   background: url("../../../src/assets/icons/28/ic-bell.svg") center no-repeat;
+}
+header .btn.ic-arrow-left::before {
+  display: block;
+  width: 28px !important;
+  height: 28px !important;
+  aspect-ratio: 1;
+  background: url("../../../src/assets/icons/28/ic-arrow-left.svg") center no-repeat;
+}
+header h1 {
+  font: 600 18px/26px "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  color: #111111;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 header:empty {
   display: none;
@@ -528,6 +542,9 @@ footer .btn-wrap {
   width: 100%;
   gap: 10px 20px;
   flex-direction: column;
+}
+footer:empty {
+  display: none;
 }
 
 .rm-match-wrap .title {
@@ -569,6 +586,60 @@ footer .btn-wrap {
   top: 0;
   left: 0;
   right: 0;
+}
+
+.list-alert {
+  padding-inline: 20px;
+  min-height: 100%;
+}
+.list-alert li {
+  margin-bottom: 10px;
+}
+.list-alert p.date {
+  font: 600 15px/140% "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  color: #111111;
+  padding: 10px 4px;
+}
+.list-alert a {
+  display: block;
+  font: 400 13px/140% "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  color: #111111;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #e7e7e7;
+}
+.list-alert ul + p {
+  font: 400 13px/140% "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  color: #b0b0b0;
+  text-align: center;
+  margin-top: 60px;
+}
+.list-alert ul:empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 14px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.list-alert ul:empty + p {
+  display: none;
+}
+.list-alert ul:empty::before {
+  content: "";
+  display: block;
+  width: 100px !important;
+  height: 100px !important;
+  aspect-ratio: 1;
+  background: url("../../../src/assets/icons/100/ic-nodata-alert.svg") center no-repeat;
+}
+.list-alert ul:empty::after {
+  content: "새로운 알림이 없습니다.";
+  font: 400 13px/140% "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  color: #b0b0b0;
 }
 
 #root {
@@ -628,6 +699,4 @@ section {
 }
 .main-nav a {
   flex: 1;
-  display: flex;
-  flex-direction: column;
 }/*# sourceMappingURL=style.css.map */

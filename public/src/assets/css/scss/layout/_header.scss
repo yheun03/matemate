@@ -5,26 +5,36 @@ header{
     padding: 9px 20px;
     display: flex;
     align-items: center;
-    .btn-wrap{
-        margin-left: auto;
-        .btn{
-            height: unset;
-            border: unset;
-            padding: unset;
-            background-color: unset;
-            &::before{
-                content: "";
-                filter: v.$set-black-950;
+    .btn{
+        height: unset;
+        border: unset;
+        padding: unset;
+        background-color: unset;
+        &-wrap{
+            margin-left: auto;
+        }
+        &::before{
+            content: "";
+            filter: v.$set-black-950;
+        }
+        &.ic{
+            &-setting::before{
+                @include v.setIcon('ic-setting.svg', 28);
             }
-            &.ic{
-                &-setting::before{
-                    @include v.setIcon('ic-setting.svg', 28);
-                }
-                &-bell::before{
-                    @include v.setIcon('ic-bell.svg', 28);
-                }
+            &-bell::before{
+                @include v.setIcon('ic-bell.svg', 28);
+            }
+            &-arrow-left::before{
+                @include v.setIcon('ic-arrow-left.svg', 28);
             }
         }
+    }
+    h1{
+        font: v.$btn3-600;
+        color: v.$black-950;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
     }
     &:empty{
         display: none;
