@@ -18,19 +18,6 @@
     letter-spacing: -0.25px;
     color: v.$black-950;
 
-    &.bg{
-        &-primary{
-            background-color: v.$primary-500;
-            border-color: v.$primary-500;
-            color: v.$white;
-        }
-        &-secondary{
-            background-color: v.$secondary-100;
-            border-color: v.$secondary-100;
-            color: v.$black-400;
-        }
-    }
-
     &.cp{
         &-naver{
             background-color: #03C75A;
@@ -46,6 +33,15 @@
         &-20{
 
             font: v.$btn2-600;
+        }
+    }
+    &.s{
+        &-sm{
+            height: unset;
+            min-width: 170px;
+            border-color: v.$secondary-400;
+            font: v.$b4-600;
+            color: v.$black-950;
         }
     }
 
@@ -65,5 +61,27 @@
             letter-spacing: -0.25px;
             margin-top: -5px;
         }
+    }
+
+    &.bg{
+        &-primary{
+            background-color: v.$primary-500;
+            border-color: v.$primary-500;
+            color: v.$white;
+        }
+        &-secondary{
+            background-color: v.$secondary-100;
+            border-color: v.$secondary-100;
+            color: v.$black-400;
+        }
+    }
+
+    &.anchor{
+        font: v.$btn4-700;
+        padding: 20px;
+        width: 100%;
+        border: unset;
+        justify-content: start;
+        height: 64px;
     }
 }

@@ -23,3 +23,37 @@
         flex: 1;
     }
 }
+
+.recommendation{
+    section{
+        padding-block: 20px;
+    }
+    .item{
+        padding-inline: 20px;
+    }
+    .alert-rm{
+        padding-inline: 20px;
+        margin-block: 20px;
+        & > div{
+            padding: 20px;
+            background-color: v.$white;
+            border-radius: 10px;
+        }
+        p.title{
+            font: v.$b3-600;
+        }
+        .btn-wrap{
+            margin-top: 32px;
+            justify-content: center;
+            padding-inline: 20px;
+            .btn{
+                flex: 1;
+                min-width: unset;
+                padding-inline: 10px;
+            }
+        }
+    }
+    .list-notice{
+        padding-top: unset;
+    }
+}

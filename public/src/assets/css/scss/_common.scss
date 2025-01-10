@@ -103,6 +103,25 @@
             margin-top: 24px;
         }
 
+        &.type{
+            &-rows{
+                padding: 12px 12px 16px;
+                box-shadow: unset;
+                & > div{
+                    grid-template: 75px auto / auto;
+                    place-items: center;
+                    gap: 16px;
+                    margin-top: unset;
+                    img{
+                        height: 100%;
+                    }
+                }
+                .btn{
+                    margin-top: 16px;
+                }
+            }
+        }
+
         p.title{
             font: v.$btn3-600;
             font-weight: 500;
@@ -150,11 +169,6 @@
             display: flex;
             justify-content: center;
             margin-top: 16px;
-            .btn{
-                height: unset;
-                min-width: 170px;
-                border-color: v.$secondary-400;
-            }
         }
     }
 }

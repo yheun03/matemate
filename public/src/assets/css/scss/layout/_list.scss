@@ -55,11 +55,17 @@
     }
     &-notice{
         padding: 50px 20px 0;
+        p.title{
+            font: v.$btn5-600;
+            color: v.$black-950;
+            margin-bottom: 10px;
+        }
         li{
             border: 1px solid v.$black-100;
             border-radius: 16px;
             padding: 18px 24px;
             margin-bottom: 16px;
+            background-color: v.$white;
             a{
                 display: grid;
                 grid-template-columns: 24px 1fr;
@@ -73,10 +79,62 @@
                     text-overflow: ellipsis;
                     word-break: keep-all;
                     max-width: 100%;
+                    justify-self: flex-start;
                 }
                 &::before{
                     content: "";
                     @include v.setIcon('ic-notice.svg', 24);
+                }
+            }
+        }
+        ul{
+            & + p{
+                font: v.$b4-500;
+                color: v.$black-300;
+                text-align: center;
+                margin-top: 60px;
+            }
+            &:empty{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                gap: 14px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                & + p{
+                    display: none;
+                }
+                &::before{
+                    content: "";
+                    @include v.setIcon("ic-nodata-alert.svg", 100);
+                }
+                &::after{
+                    content: "공지사항이 없습니다.";
+                    font: v.$b4-500;
+                    color: v.$black-300;
+                }
+            }
+        }
+    }
+    &-rm{
+        width: inherit;
+        position: relative;
+        margin-block: 20px;
+        & > ul{
+            width: 100%;
+            display: flex;
+            overflow-x: auto;
+            gap: 14px;
+            & > li{
+                flex-basis: 180px;
+                &:first-child{
+                    margin-left: 20px;
+                }
+                &:last-child{
+                    margin-right: 20px;
                 }
             }
         }
