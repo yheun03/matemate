@@ -53,4 +53,32 @@
             }
         }
     }
+    &-notice{
+        padding: 50px 20px 0;
+        li{
+            border: 1px solid v.$black-100;
+            border-radius: 16px;
+            padding: 18px 24px;
+            margin-bottom: 16px;
+            a{
+                display: grid;
+                grid-template-columns: 24px 1fr;
+                place-items: center;
+                gap: 12px;
+                font: v.$b0-400;
+                color: v.$black-950;
+                p{
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    word-break: keep-all;
+                    max-width: 100%;
+                }
+                &::before{
+                    content: "";
+                    @include v.setIcon('ic-notice.svg', 24);
+                }
+            }
+        }
+    }
 }

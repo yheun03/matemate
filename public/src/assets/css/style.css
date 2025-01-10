@@ -641,6 +641,38 @@ footer:empty {
   font: 400 13px/140% "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   color: #b0b0b0;
 }
+.list-notice {
+  padding: 50px 20px 0;
+}
+.list-notice li {
+  border: 1px solid #e7e7e7;
+  border-radius: 16px;
+  padding: 18px 24px;
+  margin-bottom: 16px;
+}
+.list-notice li a {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  place-items: center;
+  gap: 12px;
+  font: 400 18px/26px "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  color: #111111;
+}
+.list-notice li a p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: keep-all;
+  max-width: 100%;
+}
+.list-notice li a::before {
+  content: "";
+  display: block;
+  width: 24px !important;
+  height: 24px !important;
+  aspect-ratio: 1;
+  background: url("../../../src/assets/icons/24/ic-notice.svg") center no-repeat;
+}
 
 #root {
   position: relative;
