@@ -84,4 +84,42 @@
         justify-content: start;
         height: 64px;
     }
+
+    &.custom{
+        display: flex;
+        padding: 12px 20px;
+        border-radius: 10px;
+        background-color: v.$white;
+        border: 1px solid v.$secondary-300;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+        padding-right: 40px;
+        &::after{
+            content: "";
+            @include v.setIcon('ic-arrow-right.svg', 20);
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 10px;
+        }
+        span{
+            font: v.$b3-500;
+            letter-spacing: -0.25px;
+            &.title{
+                font: v.$btn3-600;
+            }
+        }
+    }
+
+    &.type{
+        &-text{
+            padding: unset;
+            border: unset;
+            border-radius: unset;
+            font: v.$b4-500;
+            color: v.$black-500;
+            text-decoration: underline;
+        }
+    }
 }

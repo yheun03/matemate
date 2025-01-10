@@ -44,6 +44,60 @@
             }
         }
     }
+
+    // 매칭 결과 페이지
+    &-result{
+        padding-inline: 20px;
+        justify-items: center;
+        p.title{
+            font: v.$h6-500;
+            color: v.$black-950;
+            letter-spacing: -0.25px;
+            text-align: center;
+            span{
+                font-weight: 700;
+            }
+        }
+        .btn{
+            margin-top: 24px;
+            &.type-text{
+                margin-top: 40px;
+            }
+        }
+        .u{
+            &-photo{
+                width: 120px;
+                aspect-ratio: 1;
+                border-radius: 50%;
+                object-fit: contain;
+                margin: 16px auto;
+            }
+            &-faculty,
+            &-major{
+                text-align: center;
+                font: v.$h6-600;
+            }
+        }
+    }
+
+    &-info{
+        width: 100%;
+        margin-top: 60px;
+        padding-block: 7px;
+        border-radius: 10px;
+        background-color: v.$primary-100;
+        dl{
+            width: 100%;
+            padding: 7px 24px;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            font: v.$b0-600;
+            color: v.$black-950;
+            dd{
+                text-align: right;
+            }
+        }
+    }
 }
 .swiper{
     position: absolute;
