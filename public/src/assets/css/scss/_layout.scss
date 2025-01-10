@@ -52,6 +52,9 @@ section{
     position: relative;
     padding-top: 20px;
     overflow-y: auto;
+    &:has(.rm-match-wrap){
+        overflow: unset;
+    }
     &:has(.tab){
         padding-top: unset;
     }

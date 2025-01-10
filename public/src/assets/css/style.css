@@ -892,6 +892,9 @@ section {
   padding-top: 20px;
   overflow-y: auto;
 }
+section:has(.rm-match-wrap) {
+  overflow: unset;
+}
 section:has(.tab) {
   padding-top: unset;
 }
