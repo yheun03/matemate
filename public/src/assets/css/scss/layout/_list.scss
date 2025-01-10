@@ -191,6 +191,7 @@
                     flex: 1;
                     height: 38px;
                     padding: unset;
+                    font: v.$b4-600;
                     & + .btn{
                         border-left: 1px solid v.$black-100;
                     }
@@ -204,6 +205,22 @@
                         &::before{
                             content: "";
                             @include v.setIcon('ic-accept.svg', 30);
+                        }
+                    }
+                    &.type{
+                        &-accept{
+                            color: v.$primary-500;
+                            &::after{
+                                content: "";
+                                @include v.setIcon('ic-arrow-right.svg', 20);
+                                background-size: 16px;
+                                filter: v.$set-primary-500;
+                                margin-left: 2px;
+                                margin-bottom: 1px;
+                            }
+                        }
+                        &-delete{
+                            color: v.$error;
                         }
                     }
                 }

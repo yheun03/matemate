@@ -807,6 +807,7 @@ footer:empty {
   flex: 1;
   height: 38px;
   padding: unset;
+  font: 600 13px/140% "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
 .list-result-match .btn-wrap .btn + .btn {
   border-left: 1px solid #e7e7e7;
@@ -826,6 +827,24 @@ footer:empty {
   height: 30px !important;
   aspect-ratio: 1;
   background: url("../../../src/assets/icons/30/ic-accept.svg") center no-repeat;
+}
+.list-result-match .btn-wrap .btn.type-accept {
+  color: #447eed;
+}
+.list-result-match .btn-wrap .btn.type-accept::after {
+  content: "";
+  display: block;
+  width: 20px !important;
+  height: 20px !important;
+  aspect-ratio: 1;
+  background: url("../../../src/assets/icons/20/ic-arrow-right.svg") center no-repeat;
+  background-size: 16px;
+  filter: invert(45%) sepia(81%) saturate(487%) hue-rotate(182deg) brightness(92%) contrast(101%);
+  margin-left: 2px;
+  margin-bottom: 1px;
+}
+.list-result-match .btn-wrap .btn.type-delete {
+  color: #EB5757;
 }
 
 #root {
