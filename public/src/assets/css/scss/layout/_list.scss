@@ -139,4 +139,75 @@
             }
         }
     }
+    &-result{
+        &-match{
+            padding: 20px;
+            li{
+                border: 1px solid v.$black-100;
+                border-radius: 10px;
+                overflow: hidden;
+                &:not(:last-child){
+                    margin-bottom: 20px;
+                }
+            }
+            .item-body{
+                padding: 14px 12px;
+                display: grid;
+                grid-template-columns: 62px 1fr;
+                gap: 22px;
+                place-items: center;
+                & > div{
+                    justify-self: flex-start;
+                }
+            }
+            img{
+                // width: 10px;
+                aspect-ratio: 1;
+                width: 100%;
+                object-fit: contain;
+            }
+            p{
+                font: v.$b4-300;
+                color: v.$black-950;
+                &:not(:last-child){
+                    margin-bottom: 4px;
+                }
+            }
+            .u{
+                &-name{
+                    font: v.$btn5-600;
+                }
+            }
+            .btn-wrap{
+                gap: unset;
+                .btn{
+                    border: {
+                        color: v.$black-100;
+                        right: unset;
+                        bottom: unset;
+                        left: unset;
+                        radius: unset;
+                    }
+                    flex: 1;
+                    height: 38px;
+                    padding: unset;
+                    & + .btn{
+                        border-left: 1px solid v.$black-100;
+                    }
+                    &.ic-delete{
+                        &::before{
+                            content: "";
+                            @include v.setIcon('ic-delete.svg', 30);
+                        }
+                    }
+                    &.ic-accept{
+                        &::before{
+                            content: "";
+                            @include v.setIcon('ic-accept.svg', 30);
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

@@ -759,6 +759,74 @@ footer:empty {
 .list-rm > ul > li:last-child {
   margin-right: 20px;
 }
+.list-result-match {
+  padding: 20px;
+}
+.list-result-match li {
+  border: 1px solid #e7e7e7;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.list-result-match li:not(:last-child) {
+  margin-bottom: 20px;
+}
+.list-result-match .item-body {
+  padding: 14px 12px;
+  display: grid;
+  grid-template-columns: 62px 1fr;
+  gap: 22px;
+  place-items: center;
+}
+.list-result-match .item-body > div {
+  justify-self: flex-start;
+}
+.list-result-match img {
+  aspect-ratio: 1;
+  width: 100%;
+  object-fit: contain;
+}
+.list-result-match p {
+  font: 300 13px/140% "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  color: #111111;
+}
+.list-result-match p:not(:last-child) {
+  margin-bottom: 4px;
+}
+.list-result-match .u-name {
+  font: 600 15px/140% "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+.list-result-match .btn-wrap {
+  gap: unset;
+}
+.list-result-match .btn-wrap .btn {
+  border-color: #e7e7e7;
+  border-right: unset;
+  border-bottom: unset;
+  border-left: unset;
+  border-radius: unset;
+  flex: 1;
+  height: 38px;
+  padding: unset;
+}
+.list-result-match .btn-wrap .btn + .btn {
+  border-left: 1px solid #e7e7e7;
+}
+.list-result-match .btn-wrap .btn.ic-delete::before {
+  content: "";
+  display: block;
+  width: 30px !important;
+  height: 30px !important;
+  aspect-ratio: 1;
+  background: url("../../../src/assets/icons/30/ic-delete.svg") center no-repeat;
+}
+.list-result-match .btn-wrap .btn.ic-accept::before {
+  content: "";
+  display: block;
+  width: 30px !important;
+  height: 30px !important;
+  aspect-ratio: 1;
+  background: url("../../../src/assets/icons/30/ic-accept.svg") center no-repeat;
+}
 
 #root {
   position: relative;
@@ -801,8 +869,41 @@ footer:empty {
 }
 
 section {
+  position: relative;
   padding-top: 20px;
   overflow-y: auto;
+}
+section:has(.tab) {
+  padding-top: unset;
+}
+section .tab {
+  position: sticky;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  gap: 3px;
+  background-color: #ffffff;
+}
+section .tab a {
+  position: relative;
+  flex: 1;
+  text-align: center;
+  padding-bottom: 10px;
+}
+section .tab a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #e0e3e5;
+  transition: 0.2s;
+}
+section .tab a.active::before {
+  height: 4px;
+  background-color: #2f60e1;
 }
 
 .insertMyDataSuccese {
@@ -854,4 +955,12 @@ section {
 }
 .recommendation .list-notice {
   padding-top: unset;
+}
+
+.tab {
+  display: flex;
+  z-index: 1;
+}
+.tab a {
+  flex: 1;
 }/*# sourceMappingURL=style.css.map */

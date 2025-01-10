@@ -57,3 +57,10 @@
         padding-top: unset;
     }
 }
+.tab{
+    display: flex;
+    z-index: 1;
+    a{
+        flex: 1;
+    }
+}
