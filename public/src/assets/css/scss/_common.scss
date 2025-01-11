@@ -20,8 +20,8 @@
     &::before{
         content: "";
         position: absolute;
-        @include v.setIcon('ic-arrow-right', 18); // 임시로 넣은거
-        background-color: red;
+        @include v.setIcon('ic-information.png', 18);
+        background-size: 18px;
         top: 3px;
         left: 0;
     }
@@ -32,6 +32,16 @@
         color: v.$black-900;
         top: 0;
         left: 20px;
+    }
+    &.type-warning{
+        &::before{
+            @include v.setIcon('ic-error.svg', 18);
+            top: 4px;
+        }
+        &::after{
+            content: "경고";
+            color: v.$error;
+        }
     }
 }
 

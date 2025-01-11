@@ -468,8 +468,8 @@ http://scripts.sil.org/OFL
   width: 18px !important;
   height: 18px !important;
   aspect-ratio: 1;
-  background: url("../../../src/assets/icons/18/ic-arrow-right") center no-repeat;
-  background-color: red;
+  background: url("../../../src/assets/icons/18/ic-information.png") center no-repeat;
+  background-size: 18px;
   top: 3px;
   left: 0;
 }
@@ -480,6 +480,18 @@ http://scripts.sil.org/OFL
   color: #3d3d3d;
   top: 0;
   left: 20px;
+}
+.dscpt-information.type-warning::before {
+  display: block;
+  width: 18px !important;
+  height: 18px !important;
+  aspect-ratio: 1;
+  background: url("../../../src/assets/icons/18/ic-error.svg") center no-repeat;
+  top: 4px;
+}
+.dscpt-information.type-warning::after {
+  content: "경고";
+  color: #EB5757;
 }
 
 .status-noti {
