@@ -190,6 +190,18 @@
                         left: 2px;
                     }
                 }
+                &.type-noText{
+                    width: 52px;
+                    &:has(input:checked){
+                        &::before{
+                            left: 26px;
+                        }
+                    }
+                    &::after{
+                        content: unset !important;
+                    }
+                }
+                
             }
         }
     }

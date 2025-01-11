@@ -311,6 +311,15 @@ http://scripts.sil.org/OFL
   content: "ON";
   left: 2px;
 }
+.ipt label.type-toggle.type-noText {
+  width: 52px;
+}
+.ipt label.type-toggle.type-noText:has(input:checked)::before {
+  left: 26px;
+}
+.ipt label.type-toggle.type-noText::after {
+  content: unset !important;
+}
 .ipt > div:has(.type-chip) {
   display: flex;
   flex-wrap: wrap;
