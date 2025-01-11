@@ -20,12 +20,20 @@
 
     &.cp{
         &-naver{
+            @include v.setBg('ic-logo-naver.svg', 24);
             background-color: #03C75A;
             border-color: #03C75A;
-            &::before{
-                content: "";
-                @include v.setIcon('ic-error.svg', 18) // 28 아이콘 추가
-            }
+            background-position: 16px;
+            padding-left: 40px;
+            color: #ffffff;
+        }
+        &-google{
+            @include v.setBg('ic-logo-google.svg', 24);
+            background-color: #ffffff;
+            border-color: #747775;
+            background-position: 16px;
+            padding-left: 40px;
+            color: #1f1f1f;
         }
     }
 

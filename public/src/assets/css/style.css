@@ -349,16 +349,20 @@ http://scripts.sil.org/OFL
   color: #111111;
 }
 .btn.cp-naver {
+  background: url("../../../src/assets/icons/24/ic-logo-naver.svg") center no-repeat;
   background-color: #03C75A;
   border-color: #03C75A;
+  background-position: 16px;
+  padding-left: 40px;
+  color: #ffffff;
 }
-.btn.cp-naver::before {
-  content: "";
-  display: block;
-  width: 18px !important;
-  height: 18px !important;
-  aspect-ratio: 1;
-  background: url("../../../src/assets/icons/18/ic-error.svg") center no-repeat;
+.btn.cp-google {
+  background: url("../../../src/assets/icons/24/ic-logo-google.svg") center no-repeat;
+  background-color: #ffffff;
+  border-color: #747775;
+  background-position: 16px;
+  padding-left: 40px;
+  color: #1f1f1f;
 }
 .btn.ts-20 {
   font: 600 20px/26px "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
