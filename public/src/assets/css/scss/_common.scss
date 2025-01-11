@@ -14,33 +14,27 @@
     position: relative;
     font: v.$b1-400;
     color: v.$black-600;
-    padding-top: 30px;
-    margin-top: 16px; // 임시로 넣은거
-    // 나중에 after의 배경으로 아이콘 집어넣기
+    padding: 30px 0 0 4px;
+    margin-top: 16px;
     &::before{
-        content: "";
-        position: absolute;
-        @include v.setIcon('ic-information.png', 18);
-        background-size: 18px;
-        top: 3px;
-        left: 0;
-    }
-    &::after{
         content: "정보";
         position: absolute;
+        @include v.setBg('ic-information.png', 18);
+        background: {
+            size: 18px !important;
+            position: 0 !important;
+        }
+        padding-left: 20px;
+        top: 3px;
+        left: 0;
         font: v.$btn3-600;
         color: v.$black-900;
-        top: 0;
-        left: 20px;
     }
     &.type-warning{
         &::before{
-            @include v.setIcon('ic-error.svg', 18);
-            top: 4px;
-        }
-        &::after{
             content: "경고";
             color: v.$error;
+            @include v.setBg('ic-error.svg', 18);
         }
     }
 }
