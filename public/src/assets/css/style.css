@@ -1179,4 +1179,30 @@ section .tab a.active::before {
 }
 .tab a {
   flex: 1;
+}
+
+.updateUser label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding-block: 24px 18px;
+}
+.updateUser label input {
+  display: none;
+}
+.updateUser label img {
+  width: 100px;
+  aspect-ratio: 1;
+  object-fit: contain;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #c2d9fb;
+}
+.updateUser label span {
+  font: 500 15px/140% "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  color: #888888;
+}
+.updateUser .ipt {
+  padding-inline: 20px;
 }/*# sourceMappingURL=style.css.map */

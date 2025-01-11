@@ -28,21 +28,35 @@
     <script src="../../src/assets/scripts/common.js" defer></script>
 </head>
 <body>
-    <div id="root" class="result">
+    <div id="root">
         <header>
             <button class="btn ic-arrow-left"></button>
             <h1>설정</h1>
         </header>
         <section>
-            <!-- <input type="file" name="u-photo" accept="image/*" onchange="readURL(this);">
-            <img src="" alt="" id="preview"> -->
-
-            <!-- <input type="file" onchange="readURL(this);" accept="image/*">
-            <img id="preview" alt="이미지 미리보기" /> -->
-            <input type="file" id="fileInput" accept="image/*">
-            <img id="preview" alt="이미지 ㅇ미리보기">
+            <div class="updateUser">
+                <div>
+                    <label>
+                        <input type="file" id="fileInput" accept="image/*">
+                        <img id="preview" alt="">
+                        <span>사진 변경하기</span>
+                    </label>
+                </div>
+                <div class="ipt">
+                    <div>
+                        <input type="text" placeholder="닉네임 변경">
+                    </div>
+                    <div>
+                        <input type="text" placeholder="소개글 변경">
+                    </div>
+                </div>
+            </div>
         </section>
-        <footer></footer>
+        <footer>
+            <div class="btn-wrap">
+                <button class="btn bg-primary ts-20 full">완료</button>
+            </div>
+        </footer>
     </div>
 </body>
 </html>

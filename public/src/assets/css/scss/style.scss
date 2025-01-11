@@ -64,3 +64,31 @@
         flex: 1;
     }
 }
+
+.updateUser{
+    label{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding-block: 24px 18px;
+        input{
+            display: none;
+        }
+        img{
+            width: 100px;
+            aspect-ratio: 1;
+            object-fit: contain;
+            border-radius: 50%;
+            overflow: hidden;
+            background-color: v.$primary-200;
+        }
+        span{
+            font: v.$btn5-500;
+            color: v.$black-400;
+        }
+    }
+    .ipt{
+        padding-inline: 20px;
+    }
+}
