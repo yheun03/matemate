@@ -265,6 +265,52 @@ http://scripts.sil.org/OFL
   aspect-ratio: 1;
   background: url("../../../src/assets/icons/22/ic-radio-active.svg") center no-repeat;
 }
+.ipt label.type-toggle {
+  position: relative;
+  display: block;
+  width: 56px;
+  height: 28px;
+  padding: 2px;
+  background-color: #b6bbc3;
+  border-radius: 14px;
+  transition: 0.2s;
+}
+.ipt label.type-toggle::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 2px;
+  transform: translateY(-50%);
+  display: block;
+  height: 24px;
+  aspect-ratio: 1;
+  border-radius: 100%;
+  background-color: #ffffff;
+  transition: 0.2s;
+}
+.ipt label.type-toggle::after {
+  content: "OFF";
+  position: absolute;
+  top: 50%;
+  left: 28px;
+  transform: translateY(-50%);
+  font: 500 12px/120% "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  width: 26px;
+  text-align: center;
+  color: #ffffff;
+  transition: 0.2s;
+}
+.ipt label.type-toggle:has(input:checked) {
+  flex-direction: row-reverse;
+  background-color: #447eed;
+}
+.ipt label.type-toggle:has(input:checked)::before {
+  left: 30px;
+}
+.ipt label.type-toggle:has(input:checked)::after {
+  content: "ON";
+  left: 2px;
+}
 .ipt > div:has(.type-chip) {
   display: flex;
   flex-wrap: wrap;
@@ -931,6 +977,56 @@ footer:empty {
 }
 .list-result-match .btn-wrap .btn.type-delete {
   color: #EB5757;
+}
+.list-setting p {
+  font: 500 12px/120% "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  color: #888888;
+  padding-inline: 24px;
+  margin-bottom: 12px;
+}
+.list-setting .ipt {
+  margin-left: auto;
+}
+.list-setting .u-info {
+  margin-block: -2px 2px;
+}
+.list-setting .u-photo {
+  width: 28px;
+  aspect-ratio: 1;
+  object-fit: contain;
+  border-radius: 50%;
+}
+.list-setting .u-name {
+  font: 500 20px/140% "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  color: #111111;
+  letter-spacing: -0.3px;
+}
+.list-setting > ul > li:not(:first-child) {
+  border-top: 1px solid #d1d1d1;
+  padding-block: 20px 10px;
+}
+.list-setting > ul ul {
+  padding-inline: 24px;
+}
+.list-setting > ul ul li {
+  display: flex;
+  align-items: center;
+  padding-inline: 6px;
+  height: 40px;
+}
+.list-setting > ul ul li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+  font: 500 16px/26px "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  color: #111111;
+  line-height: 40px;
+}
+.list-setting > ul ul li.ic-arrow-right {
+  background: url("../../../src/assets/icons/20/ic-arrow-right.svg") center no-repeat;
+  background-position: right center;
 }
 
 #root {

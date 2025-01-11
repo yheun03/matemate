@@ -145,6 +145,52 @@
                     }
                 }
             }
+            &-toggle{
+                position: relative;
+                display: block;
+                width: 56px;
+                height: 28px;
+                padding: 2px;
+                background-color: v.$secondary-400;
+                border-radius: 14px;
+                transition: v.$delay;
+                &::before{
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 2px;
+                    transform: translateY(-50%);
+                    display: block;
+                    height: 24px;
+                    aspect-ratio: 1;
+                    border-radius: 100%;
+                    background-color: v.$white;
+                    transition: v.$delay;
+                }
+                &::after{
+                    content: "OFF";
+                    position: absolute;
+                    top: 50%;
+                    left: 28px;
+                    transform: translateY(-50%);
+                    font: v.$c1-500;
+                    width: 26px;
+                    text-align: center;
+                    color: v.$white;
+                    transition: v.$delay;
+                }
+                &:has(input:checked){
+                    flex-direction: row-reverse;
+                    background-color: v.$primary-500;
+                    &::before{
+                        left: 30px;
+                    }
+                    &::after{
+                        content: "ON";
+                        left: 2px;
+                    }
+                }
+            }
         }
     }
 
