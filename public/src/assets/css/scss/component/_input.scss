@@ -121,6 +121,10 @@
                         display: none;
                     }
                 }
+                &:has(input:checked){
+                    background-color: v.$primary-500;
+                    color: v.$white;
+                }
             }
             &-radio{
                 padding: 24px;
