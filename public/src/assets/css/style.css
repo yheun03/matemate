@@ -942,7 +942,8 @@ footer:empty {
 .list-alert p.date {
   font: 600 15px/140% "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   color: #111111;
-  padding: 10px 4px;
+  padding: 5px 4px;
+  letter-spacing: -0.5px;
 }
 .list-alert a {
   display: block;
