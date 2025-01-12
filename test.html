@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>소음 정도 설문</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* 전체 레이아웃 */
+        body {
+        font-family: 'Noto Sans KR', sans-serif;
+        text-align: center;
+        background-color: #f9f9f9;
+        margin: 0;
+        padding: 0;
+        }
+
+        .container {
+        margin-top: 50px;
+        }
+
+        h2 {
+        font-size: 24px;
+        margin-bottom: 5px;
+        }
+
+        .description {
+        font-size: 14px;
+        color: #888;
+        margin-bottom: 20px;
+        }
+
+        /* 슬라이더와 이모지 배치 */
+        .slider-container {
+        position: relative;
+        width: 300px;
+        margin: 0 auto;
+        }
+
+        #noiseSlider {
+        width: 100%;
+        appearance: none;
+        height: 8px;
+        background: #3366cc;
+        outline: none;
+        border-radius: 5px;
+        }
+
+        #noiseSlider::-webkit-slider-thumb {
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        /* background-color: white; */
+        background: url(https://em-content.zobj.net/thumbs/240/apple/354/neutral-face_1f610.png) center/cover no-repeat;
+        border: 2px solid #3366cc;
+        border-radius: 50%;
+        cursor: pointer;
+        }
+
+        /* 이모지 */
+        #emoji {
+        position: absolute;
+        top: -35px;
+        left: 0;
+        font-size: 32px;
+        transition: left 0.3s ease;
+        }
+
+        /* 레이블 */
+        .labels {
+        display: flex;
+        justify-content: space-between;
+        width: 300px;
+        margin: 10px auto;
+        }
+
+        .labels span {
+        font-weight: bold;
+        font-size: 16px;
+        }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>내가 생각하는 나의 소음 정도는?</h2>
+    <p class="description">*소음 : 기계식 키보드, 무분별한 통화</p>
+
+    <div class="slider-container">
+      <span id="emoji">😶</span>
+      <input type="range" id="noiseSlider" min="0" max="2" value="0">
+    </div>
+
+    <div class="labels">
+      <span>작음</span>
+      <span>중간</span>
+      <span>큼</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+  const slider = document.getElementById('noiseSlider');
+  const emoji = document.getElementById('emoji');
+
+  // 슬라이더 값에 따라 이모지와 위치 변경
+  slider.addEventListener('input', function() {
+    const value = slider.value;
+
+    // 슬라이더 값에 따른 이모지 변경
+    if (value == 0) {
+      emoji.textContent = '😶';  // 작음
+    } else if (value == 1) {
+      emoji.textContent = '🙂';  // 중간
+    } else if (value == 2) {
+      emoji.textContent = '😮';  // 큼
+    }
+
+    // 슬라이더 위치에 따라 이모지 이동
+    const max = slider.max;
+    const percentage = (value / max) * 100;
+    emoji.style.left = `calc(${percentage}% - 16px)`;
+  });
+});
+  </script>
+</body>
+</html>

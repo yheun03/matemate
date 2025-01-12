@@ -30,4 +30,19 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+    const rangeInputs = document.querySelectorAll("input[type='range']");
+
+    rangeInputs.forEach(function (rangeInput) {
+        rangeInput.addEventListener("input", function () {
+            const value = this.value;
+
+            if (value === "0") {
+                this.className = "bad";
+            } else if (value === "100") {
+                this.className = "good";
+            } else {
+                this.className= "";
+            }
+        });
+    });
 });
