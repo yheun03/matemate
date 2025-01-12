@@ -541,18 +541,11 @@ http://scripts.sil.org/OFL
 .result-image .info-wrap {
   position: relative;
   padding: 1.8666666667vw 4.2666666667vw 4.2666666667vw;
-}
-.result-image .info-wrap::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 80%;
-  aspect-ratio: 908/625;
-  opacity: 0.2;
-  background: url("../../../src/assets//images/logo.png") center/cover no-repeat;
-  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100dvw;
+  background: url("../../../src/assets//images/logo-bg.png") center/contain no-repeat;
 }
 .result-image .info-wrap .ipt label {
   font: 700 1.3333333333vw/180% "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;

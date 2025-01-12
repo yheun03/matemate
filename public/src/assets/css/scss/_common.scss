@@ -93,18 +93,11 @@
         .info-wrap{
             position: relative;
             padding: calc(7 / 375 * 100vw) calc(16 / 375 * 100vw) calc(16 / 375 * 100vw);
-            &::before{
-                content: "";
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                width: 80%;
-                aspect-ratio: 908/625;
-                opacity: 0.2;
-                background: url(v.$url + '/images/logo.png') center/cover no-repeat;
-                z-index: -1;
-            }
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100dvw;
+            background: url(v.$url + '/images/logo-bg.png') center/contain no-repeat;
             .ipt{
                 label{
                     font: 700 calc(5 / 375 * 100vw)/180% v.$font-main;
