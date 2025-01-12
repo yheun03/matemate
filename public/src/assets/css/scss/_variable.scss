@@ -21,6 +21,8 @@ $font-main: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont
     $b0-400             : 400 18px/26px $font-main;
     $b1-400             : 400 16px/26px $font-main;
     $b1-500             : 500 16px/26px $font-main;
+    $b1-600             : 600 16px/26px $font-main;
+    $b2-400             : 400 15px/140% $font-main;
     $b3-400             : 400 14px/140% $font-main;
     $b3-500             : 500 14px/140% $font-main;
     $b3-600             : 600 14px/140% $font-main;
@@ -35,10 +37,12 @@ $font-main: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont
     $btn4-700           : 700 18px/140% $font-main;
     $btn5-500           : 500 15px/140% $font-main;
     $btn5-600           : 600 15px/140% $font-main;
+    $btn6-600           : 600 16px/140% $font-main;
     $btn7-700           : 700 12px/140% $font-main;
 
     // 캡션
     $c1-500             : 500 12px/120% $font-main;
+    $c1-400             : 400 12px/200% $font-main;
 
 // 색상들
     // 기본색상

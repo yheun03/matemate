@@ -37,6 +37,19 @@
             @include v.setBg('ic-error.svg', 18);
         }
     }
+    &.type-inline{
+        padding-top: unset;
+        padding-left: 18px;
+        margin-top: 5px;
+        &::before{
+            content: "";
+            height: 18px;
+            background-size: 15px !important;
+        }
+        p{
+            font: v.$c1-400;
+        }
+    }
 }
 
 .status-noti{
@@ -229,7 +242,12 @@
                     }
                 }
                 .btn{
+                    min-width: 75px;
                     margin-top: 16px;
+                    flex: 1;
+                    &-wrap{
+                        gap: 4px;
+                    }
                 }
             }
         }
@@ -261,14 +279,14 @@
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    gap: 8px 4px;
+                    gap: 6px 4px;
                     flex-wrap: wrap;
                 }
                 li{
-                    padding: 3px 11px;
+                    padding: 2.5px 8px;
                     background-color: v.$primary-100;
                     border-radius: 20px;
-                    font: v.$b3-400;
+                    font: v.$c1-500;
                     color: v.$black-950;
                     &::before{
                         content: "#";

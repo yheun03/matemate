@@ -45,10 +45,13 @@
     }
     &.s{
         &-sm{
+            font: v.$b3-600;
+            letter-spacing: -0.25px;
+            padding: 5px 12px;
             height: unset;
-            min-width: 170px;
+            border-radius: 5px;
+
             border-color: v.$secondary-400;
-            font: v.$b4-600;
             color: v.$black-950;
         }
     }
@@ -85,7 +88,8 @@
     }
 
     &.anchor{
-        font: v.$btn4-700;
+        font: v.$btn6-600;
+        letter-spacing: -0.25px;
         padding: 20px;
         width: 100%;
         border: unset;
