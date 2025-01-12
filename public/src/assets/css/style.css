@@ -1072,7 +1072,7 @@ footer:empty {
   padding: 14px 12px;
   display: grid;
   grid-template-columns: 62px 1fr;
-  gap: 22px;
+  gap: 20px;
   place-items: center;
 }
 .list-result-match .item-body > div {
@@ -1087,11 +1087,10 @@ footer:empty {
   font: 300 13px/140% "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   color: #111111;
 }
-.list-result-match p:not(:last-child) {
-  margin-bottom: 4px;
-}
 .list-result-match .u-name {
+  display: inline-block;
   font: 600 15px/140% "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  margin-bottom: 6px;
 }
 .list-result-match .btn-wrap {
   gap: unset;

@@ -154,7 +154,7 @@
                 padding: 14px 12px;
                 display: grid;
                 grid-template-columns: 62px 1fr;
-                gap: 22px;
+                gap: 20px;
                 place-items: center;
                 & > div{
                     justify-self: flex-start;
@@ -169,13 +169,12 @@
             p{
                 font: v.$b4-300;
                 color: v.$black-950;
-                &:not(:last-child){
-                    margin-bottom: 4px;
-                }
             }
             .u{
                 &-name{
+                    display: inline-block;
                     font: v.$btn5-600;
+                    margin-bottom: 6px;
                 }
             }
             .btn-wrap{
