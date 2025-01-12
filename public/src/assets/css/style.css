@@ -549,14 +549,17 @@ http://scripts.sil.org/OFL
   left: 50%;
   transform: translate(-50%, -50%);
   width: 80%;
-  height: 80%;
+  aspect-ratio: 908/625;
   opacity: 0.2;
   background: url("../../../src/assets//images/logo.png") center/cover no-repeat;
   z-index: -1;
 }
 .result-image .info-wrap .ipt label {
-  font: 700 1.3333333333vw/120% "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-  padding: 0.5333333333vw 1.0666666667vw;
+  font: 700 1.3333333333vw/180% "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  padding: 0 1.0666666667vw;
+}
+.result-image .info-wrap .ipt label span {
+  padding-bottom: 0.5333333333vw;
 }
 .result-image .info-wrap .info-header {
   display: flex;
@@ -580,6 +583,8 @@ http://scripts.sil.org/OFL
 .result-image .info-wrap .info-header table th {
   font: 700 1.8666666667vw/120% "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   color: #5d5d5d;
+  vertical-align: middle;
+  padding-bottom: 0.5333333333vw;
 }
 .result-image .info-wrap .info-header table td {
   padding: 0.5333333333vw 1.6vw;
@@ -592,7 +597,7 @@ http://scripts.sil.org/OFL
   grid-template-columns: 1fr auto;
 }
 .result-image .info-wrap .info-body .ipt label {
-  font: 700 1.0666666667vw/120% "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font: 700 1.0666666667vw/180% "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   padding-inline: 0.5333333333vw;
 }
 .result-image .info-wrap .info-body p.title {
@@ -605,7 +610,8 @@ http://scripts.sil.org/OFL
   gap: 2.1333333333vw;
 }
 .result-image .info-wrap .info-body > div.data-rm {
-  padding-left: 8vw;
+  padding-left: 4vw;
+  margin-left: 4vw;
   border-left: 1px dashed #98c1f8;
 }
 .result-image .info-wrap .info-body > div.data-rm > div {

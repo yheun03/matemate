@@ -100,15 +100,18 @@
                 left: 50%;
                 transform: translate(-50%, -50%);
                 width: 80%;
-                height: 80%;
+                aspect-ratio: 908/625;
                 opacity: 0.2;
                 background: url(v.$url + '/images/logo.png') center/cover no-repeat;
                 z-index: -1;
             }
             .ipt{
                 label{
-                    font: 700 calc(5 / 375 * 100vw)/120% v.$font-main;
-                    padding: calc(2 / 375 * 100vw) calc(4 / 375 * 100vw);
+                    font: 700 calc(5 / 375 * 100vw)/180% v.$font-main;
+                    padding: 0 calc(4 / 375 * 100vw);
+                    span{
+                        padding-bottom: calc(2 / 375 * 100vw);
+                    }
                 }
             }
             .info{
@@ -132,6 +135,8 @@
                         th{
                             font: 700 calc(7 / 375 * 100vw)/120% v.$font-main;
                             color: v.$black-600;
+                            vertical-align: middle;
+                            padding-bottom: calc(2 / 375 * 100vw);
                         }
                         td{
                             padding: calc(2 / 375 * 100vw) calc(6 / 375 * 100vw);
@@ -146,7 +151,7 @@
                     grid-template-columns: 1fr auto;
                     .ipt{
                         label{
-                            font: 700 calc(4 / 375 * 100vw)/120% v.$font-main;
+                            font: 700 calc(4 / 375 * 100vw)/180% v.$font-main;
                             padding-inline: calc(2 / 375 * 100vw);
                         }
                     }
@@ -161,7 +166,8 @@
                             gap: calc(8 / 375 * 100vw);
                         }
                         &.data-rm{
-                            padding-left: calc(30 / 375 * 100vw);
+                            padding-left: calc(15 / 375 * 100vw);
+                            margin-left: calc(15 / 375 * 100vw);
                             border-left: 1px dashed v.$primary-300;
                             & > div{
                                 grid-template-columns: repeat(2, 1fr);
