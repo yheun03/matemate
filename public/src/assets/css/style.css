@@ -526,7 +526,7 @@ http://scripts.sil.org/OFL
   padding-inline: 20px;
   position: relative;
 }
-.result-image img {
+.result-image > img {
   width: 100%;
   border: 1px solid #ccd0d5;
   border-radius: 10px;
@@ -559,16 +559,8 @@ http://scripts.sil.org/OFL
   justify-content: space-between;
   align-items: center;
 }
-.result-image .info-wrap .info-header p.title {
-  font: 400 7.4666666667vw/120% "BagelFatOne";
-  letter-spacing: -0.01em;
-  color: #98c1f8;
-  display: flex;
-  flex-direction: column;
-}
-.result-image .info-wrap .info-header p.title span {
-  font-size: 4.8vw;
-  margin-top: -2.1333333333vw;
+.result-image .info-wrap .info-header p.title img {
+  width: 38.9333333333vw;
 }
 .result-image .info-wrap .info-header table {
   width: auto;
@@ -593,9 +585,8 @@ http://scripts.sil.org/OFL
   font: 700 1.0666666667vw/180% "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   padding-inline: 0.5333333333vw;
 }
-.result-image .info-wrap .info-body p.title {
-  font: 400 2.6666666667vw/120% "BagelFatOne";
-  color: #888888;
+.result-image .info-wrap .info-body p.title img {
+  height: 3.4666666667vw;
 }
 .result-image .info-wrap .info-body > div > div {
   display: grid;
@@ -609,11 +600,18 @@ http://scripts.sil.org/OFL
 }
 .result-image .info-wrap .info-body > div.data-rm > div {
   grid-template-columns: repeat(2, 1fr);
-  gap: 5.3333333333vw;
+  gap: 3.2vw 5.3333333333vw;
 }
 .result-image .info-wrap .info-body > div.data-rm > div .full {
   width: unset;
   grid-column: span 2;
+}
+.result-image .info-wrap .info-body > div.data-rm > div textarea {
+  background-color: #EBEDF0;
+  color: #5d5d5d;
+  border: unset;
+  padding: 0vw 1.0666666667vw;
+  font: 700 1.0666666667vw/120% "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
 .result-image .info-wrap .info-body dl {
   display: flex;

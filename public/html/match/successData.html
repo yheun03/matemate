@@ -34,7 +34,9 @@
                 <div class="result-image">
                     <div class="info-wrap">
                         <div class="info-header">
-                            <p class="title">MATEMATE <span>CHECK LIST</span></p>
+                            <p class="title">
+                                <img src="../../src/assets/images/checklist/TITLE.svg" alt="">
+                            </p>
                             <table>
                                 <tr>
                                     <th>성별</th>
@@ -74,7 +76,9 @@
                         </div>
                         <div class="info-body">
                             <div class="data-my">
-                                <p class="title">ME</p>
+                                <p class="title">
+                                    <img src="../../src/assets/images/checklist/ME.svg" alt="">
+                                </p>
                                 <div>
                                     <dl>
                                         <dt>MBTI</dt>
@@ -327,7 +331,9 @@
                                 </div>
                             </div>
                             <div class="data-rm">
-                                <p class="title">MATE</p>
+                                <p class="title">
+                                    <img src="../../src/assets/images/checklist/MATE.svg" alt="">
+                                </p>
                                 <div>
                                     <dl class="full">
                                         <dt>생년</dt>
@@ -439,11 +445,18 @@
                                             </div>
                                         </dd>
                                     </dl>
+                                    <dl class="full">
+                                        <dd>
+                                            <div class="ipt">
+                                                <div><textarea name="" id="">그 외 : </textarea></div>
+                                            </div>
+                                        </dd>
+                                    </dl>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <img src="" alt="체크리스트 이미지">
+                    <img src="" alt="체크리스트 이미지" id="result-target">
                 </div>
             </div>
         </section>
@@ -463,7 +476,7 @@
         function captureInfoWrap() {
             html2canvas(document.querySelector('.info-wrap')).then(function(canvas) {
                 capturedImgData = canvas.toDataURL('image/png');
-                $('.result-image img').attr('src', capturedImgData);
+                $('#result-target').attr('src', capturedImgData);
             });
         }
 
