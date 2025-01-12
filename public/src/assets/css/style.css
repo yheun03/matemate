@@ -532,15 +532,15 @@ http://scripts.sil.org/OFL
   border-radius: 10px;
 }
 .result-image p.title {
-  margin-inline: 2px;
-  font: 600 18px/26px "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  margin-inline: 0.5333333333vw;
+  font: 600 4.8vw/6.9333333333vw "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   font-weight: 700;
   color: #111111;
-  margin-bottom: 8px;
+  margin-bottom: 2.1333333333vw;
 }
 .result-image .info-wrap {
   position: relative;
-  padding: 7px 16px 16px;
+  padding: 1.8666666667vw 4.2666666667vw 4.2666666667vw;
 }
 .result-image .info-wrap::before {
   content: "";
@@ -554,31 +554,35 @@ http://scripts.sil.org/OFL
   background: url("../../../src/assets//images/logo.png") center/cover no-repeat;
   z-index: -1;
 }
+.result-image .info-wrap .ipt label {
+  font: 700 1.3333333333vw/120% "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  padding: 0.5333333333vw 1.0666666667vw;
+}
 .result-image .info-wrap .info-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .result-image .info-wrap .info-header p.title {
-  font: 400 28px/normal "BagelFatOne";
+  font: 400 7.4666666667vw/120% "BagelFatOne";
   letter-spacing: -0.01em;
   color: #98c1f8;
   display: flex;
   flex-direction: column;
 }
 .result-image .info-wrap .info-header p.title span {
-  font-size: 18px;
-  margin-top: -8px;
+  font-size: 4.8vw;
+  margin-top: -2.1333333333vw;
 }
 .result-image .info-wrap .info-header table {
   width: auto;
 }
 .result-image .info-wrap .info-header table th {
-  font: 700 7px/120% "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font: 700 1.8666666667vw/120% "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   color: #5d5d5d;
 }
 .result-image .info-wrap .info-header table td {
-  padding-inline: 6px;
+  padding: 0.5333333333vw 1.6vw;
 }
 .result-image .info-wrap .info-header table td .ipt > div {
   justify-content: flex-start;
@@ -588,25 +592,25 @@ http://scripts.sil.org/OFL
   grid-template-columns: 1fr auto;
 }
 .result-image .info-wrap .info-body .ipt label {
-  font: 700 4px/normal "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-  padding-inline: 2px;
+  font: 700 1.0666666667vw/120% "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  padding-inline: 0.5333333333vw;
 }
 .result-image .info-wrap .info-body p.title {
-  font: 400 10px/120% "BagelFatOne";
+  font: 400 2.6666666667vw/120% "BagelFatOne";
   color: #888888;
 }
 .result-image .info-wrap .info-body > div > div {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
+  gap: 2.1333333333vw;
 }
 .result-image .info-wrap .info-body > div.data-rm {
-  padding-left: 30px;
+  padding-left: 8vw;
   border-left: 1px dashed #98c1f8;
 }
 .result-image .info-wrap .info-body > div.data-rm > div {
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 5.3333333333vw;
 }
 .result-image .info-wrap .info-body > div.data-rm > div .full {
   width: unset;
@@ -615,15 +619,15 @@ http://scripts.sil.org/OFL
 .result-image .info-wrap .info-body dl {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 0.5333333333vw;
 }
 .result-image .info-wrap .info-body dl dt {
-  font: 700 5px/120% "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font: 700 1.3333333333vw/120% "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   color: #233985;
   letter-spacing: -0.025em;
 }
 .result-image .info-wrap .info-body dl dd .ipt, .result-image .info-wrap .info-body dl dd .ipt > div {
-  gap: 2px;
+  gap: 0.5333333333vw;
 }
 .result-image .info-wrap .info-body dl dd .ipt > div {
   justify-content: flex-start;

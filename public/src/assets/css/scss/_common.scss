@@ -83,16 +83,16 @@
         }
         p{
             &.title{
-                margin-inline: 2px;
-                font: v.$btn3-600;
+                margin-inline: calc(2 / 375 * 100vw);
+                font: 600 calc(18 / 375 * 100vw)/calc(26 / 375 * 100vw) v.$font-main;
                 font-weight: 700;
                 color: v.$black-950;
-                margin-bottom: 8px;
+                margin-bottom: calc(8 / 375 * 100vw);
             }
         }
         .info-wrap{
             position: relative;
-            padding: 7px 16px 16px;
+            padding: calc(7 / 375 * 100vw) calc(16 / 375 * 100vw) calc(16 / 375 * 100vw);
             &::before{
                 content: "";
                 position: absolute;
@@ -105,30 +105,36 @@
                 background: url(v.$url + '/images/logo.png') center/cover no-repeat;
                 z-index: -1;
             }
+            .ipt{
+                label{
+                    font: 700 calc(5 / 375 * 100vw)/120% v.$font-main;
+                    padding: calc(2 / 375 * 100vw) calc(4 / 375 * 100vw);
+                }
+            }
             .info{
                 &-header{
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
                     p.title{
-                        font: 400 28px/normal "BagelFatOne";
+                        font: 400 calc(28 / 375 * 100vw)/120% "BagelFatOne";
                         letter-spacing: -0.01em;
                         color: v.$primary-300;
                         display: flex;
                         flex-direction: column;
                         span{
-                            font-size: 18px;
-                            margin-top: -8px;
+                            font-size: calc(18 / 375 * 100vw);
+                            margin-top: calc(8 / 375 * 100vw * -1);
                         }
                     }
                     table{
                         width: auto;
                         th{
-                            font: 700 7px/120% v.$font-main;
+                            font: 700 calc(7 / 375 * 100vw)/120% v.$font-main;
                             color: v.$black-600;
                         }
                         td{
-                            padding-inline: 6px;
+                            padding: calc(2 / 375 * 100vw) calc(6 / 375 * 100vw);
                             .ipt>div{
                                 justify-content: flex-start;
                             }
@@ -140,26 +146,26 @@
                     grid-template-columns: 1fr auto;
                     .ipt{
                         label{
-                            font: 700 4px/normal v.$font-main;
-                            padding-inline: 2px;
+                            font: 700 calc(4 / 375 * 100vw)/120% v.$font-main;
+                            padding-inline: calc(2 / 375 * 100vw);
                         }
                     }
                     p.title{
-                        font: 400 10px/120% 'BagelFatOne';
+                        font: 400 calc(10 / 375 * 100vw)/120% 'BagelFatOne';
                         color: v.$black-400;
                     }
                     & > div{
                         & > div{
                             display: grid;
                             grid-template-columns: repeat(3, 1fr);
-                            gap: 8px;
+                            gap: calc(8 / 375 * 100vw);
                         }
                         &.data-rm{
-                            padding-left: 30px;
+                            padding-left: calc(30 / 375 * 100vw);
                             border-left: 1px dashed v.$primary-300;
                             & > div{
                                 grid-template-columns: repeat(2, 1fr);
-                                gap: 20px;
+                                gap: calc(20 / 375 * 100vw);
                                 .full{
                                     width: unset;
                                     grid-column: span 2;
@@ -170,15 +176,9 @@
                     dl{
                         display: flex;
                         flex-direction: column;
-                        gap: 2px;
-                        // &,
-                        // & dd,
-                        // & .ipt,
-                        // & .ipt > div{
-                        //     // width: fit-content !important;
-                        // }
+                        gap: calc(2 / 375 * 100vw);
                         dt{
-                            font: 700 5px/120% v.$font-main;
+                            font: 700 calc(5 / 375 * 100vw)/120% v.$font-main;
                             color: v.$primary-900;
                             letter-spacing: -0.025em;
                         }
@@ -186,7 +186,7 @@
                             .ipt{
                                 &,
                                 & > div{
-                                    gap: 2px;
+                                    gap: calc(2 / 375 * 100vw);
                                 }
                                 & > div{
                                     justify-content: flex-start;

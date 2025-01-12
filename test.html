@@ -1,128 +1,497 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>소음 정도 설문</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    /* 전체 레이아웃 */
-        body {
-        font-family: 'Noto Sans KR', sans-serif;
-        text-align: center;
-        background-color: #f9f9f9;
-        margin: 0;
-        padding: 0;
-        }
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalabel=0">
+    <meta property="og:url" content="https://matemate.co.kr/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="MATEMATE" />
+    <meta property="og:site_name" content="MATEMATE" />
+    <meta property="og:description" content="한국공학대학교 기숙사 메이트 매칭 서비스! MATEMATE" />
+    <meta name="twitter:title" content="MATEMATE" />
+    <meta name="twitter:description" content="한국공학대학교 기숙사 메이트 매칭 서비스! MATEMATE" />
+    <meta name="description" content="한국공학대학교 기숙사 메이트 매칭 서비스! MATEMATE">
+    <meta name="keywords" content="한국공학대학교, 기숙사, tip, 제2기숙사, 룸메이트, 긱사메이트, 긱사" />
+    <link rel="shortcut icon" href="#">
+    <link rel="manifest" href="../../src/assets/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+    <title>MATEMATE</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="../../src/assets/css/style.css">
+    <script src="../../src/assets/scripts/jquery-3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="../../src/assets/scripts/common.js"></script>
+    <script type="module">
+        // JS 파일에서 함수 가져오기
+        import { loadAnonInfo } from '../../src/assets/scripts/firebase/loadAnonInfo.js'; // 파일 경로에 맞게 수정
 
-        .container {
-        margin-top: 50px;
-        }
-
-        h2 {
-        font-size: 24px;
-        margin-bottom: 5px;
-        }
-
-        .description {
-        font-size: 14px;
-        color: #888;
-        margin-bottom: 20px;
-        }
-
-        /* 슬라이더와 이모지 배치 */
-        .slider-container {
-        position: relative;
-        width: 300px;
-        margin: 0 auto;
-        }
-
-        #noiseSlider {
-        width: 100%;
-        appearance: none;
-        height: 8px;
-        background: #3366cc;
-        outline: none;
-        border-radius: 5px;
-        }
-
-        #noiseSlider::-webkit-slider-thumb {
-        appearance: none;
-        width: 20px;
-        height: 20px;
-        /* background-color: white; */
-        background: url(https://em-content.zobj.net/thumbs/240/apple/354/neutral-face_1f610.png) center/cover no-repeat;
-        border: 2px solid #3366cc;
-        border-radius: 50%;
-        cursor: pointer;
-        }
-
-        /* 이모지 */
-        #emoji {
-        position: absolute;
-        top: -35px;
-        left: 0;
-        font-size: 32px;
-        transition: left 0.3s ease;
-        }
-
-        /* 레이블 */
-        .labels {
-        display: flex;
-        justify-content: space-between;
-        width: 300px;
-        margin: 10px auto;
-        }
-
-        .labels span {
-        font-weight: bold;
-        font-size: 16px;
-        }
-  </style>
+        // 페이지 로드 시 데이터 가져오기
+        window.onload = () => {
+            loadAnonInfo();
+        };
+    </script>
 </head>
 <body>
-
-  <div class="container">
-    <h2>내가 생각하는 나의 소음 정도는?</h2>
-    <p class="description">*소음 : 기계식 키보드, 무분별한 통화</p>
-
-    <div class="slider-container">
-      <span id="emoji">😶</span>
-      <input type="range" id="noiseSlider" min="0" max="2" value="0">
+    <div id="root">
+        <header></header>
+        <section>
+            <div class="insertMyDataSuccese">
+                <img src="../../src/assets/icons/140/ic-success.svg" alt="">
+                <div class="result-image">
+                    <div class="info-wrap">
+                        <div class="info-header">
+                            <p class="title">MATEMATE <span>CHECK LIST</span></p>
+                            <table>
+                                <tr>
+                                    <th>성별</th>
+                                    <td>
+                                        <div class="ipt">
+                                            <div>
+                                                <label class="type-chip s-sm"><input type="radio"><span>남자</span></label>
+                                                <label class="type-chip s-sm"><input type="radio"><span>여자</span></label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>건물</th>
+                                    <td>
+                                        <div class="ipt">
+                                            <div>
+                                                <label class="type-chip s-sm"><input type="radio"><span>TIP</span></label>
+                                                <label class="type-chip s-sm"><input type="radio"><span>2 기숙사</span></label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>기간</th>
+                                    <td>
+                                        <div class="ipt">
+                                            <div>
+                                                <label class="type-chip s-sm"><input type="radio"><span>4</span></label>
+                                                <label class="type-chip s-sm"><input type="radio"><span>6</span></label>
+                                                <label class="type-chip s-sm"><input type="radio"><span>12</span></label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="info-body">
+                            <div class="data-my">
+                                <p class="title">ME</p>
+                                <div>
+                                    <dl>
+                                        <dt>MBTI</dt>
+                                        <dd>
+                                            <div class="ipt">
+                                                <div>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>E</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>N</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>T</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>J</span></label>
+                                                </div>
+                                                <div>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>I</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>S</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>F</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>P</span></label>
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>흡연</dt>
+                                        <dd>
+                                            <div class="ipt">
+                                                <div>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>X</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>O</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>많이</span></label>
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>샤워</dt>
+                                        <dd>
+                                            <div class="ipt">
+                                                <div>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>아침</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>점심</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>저녁</span></label>
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>생년월일</dt>
+                                        <dd>
+                                            <div class="ipt">
+                                                <div>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>기타</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>00</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>01</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>02</span></label>
+                                                </div>
+                                                <div>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>03</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>04</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>05</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>06</span></label>
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>벌레잡기</dt>
+                                        <dd>
+                                            <div class="ipt">
+                                                <div>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>가능</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>불가</span></label>
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>샤워시간 (분)</dt>
+                                        <dd>
+                                            <div class="ipt">
+                                                <div>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>10</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>30</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>60</span></label>
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>학번</dt>
+                                        <dd>
+                                            <div class="ipt">
+                                                <div>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>기타</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>19</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>20</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>21</span></label>
+                                                </div>
+                                                <div>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>22</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>23</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>24</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>25</span></label>
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>잠귀</dt>
+                                        <dd>
+                                            <div class="ipt">
+                                                <div>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>어두움</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>밝음</span></label>
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>본가 방문 주기</dt>
+                                        <dd>
+                                            <div class="ipt">
+                                                <div>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>자주</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>가끔</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>안감</span></label>
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>잠버릇</dt>
+                                        <dd>
+                                            <div class="ipt">
+                                                <div>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>없음</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>있음</span></label>
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>게임</dt>
+                                        <dd>
+                                            <div class="ipt">
+                                                <div>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>한다</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>가끔</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>안함</span></label>
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>취침</dt>
+                                        <dd>
+                                            <div class="ipt">
+                                                <div>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>이전</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>22</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>23</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>24</span></label>
+                                                </div>
+                                                <div>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>01</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>02</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>03</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>이후</span></label>
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>청소</dt>
+                                        <dd>
+                                            <div class="ipt">
+                                                <div>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>혼자</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>상의</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>같이</span></label>
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>디코</dt>
+                                        <dd>
+                                            <div class="ipt">
+                                                <div>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>한다</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>가끔</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>안함</span></label>
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>기상</dt>
+                                        <dd>
+                                            <div class="ipt">
+                                                <div>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>이전</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>06</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>07</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>08</span></label>
+                                                </div>
+                                                <div>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>09</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>10</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>11</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>이후</span></label>
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>추위</dt>
+                                        <dd>
+                                            <div class="ipt">
+                                                <div>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>많이</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>보통</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>조금</span></label>
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>통화</dt>
+                                        <dd>
+                                            <div class="ipt">
+                                                <div>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>한다</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>가끔</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>안함</span></label>
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>더위</dt>
+                                        <dd>
+                                            <div class="ipt">
+                                                <div>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>많이</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>보통</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>조금</span></label>
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="data-rm">
+                                <p class="title">MATE</p>
+                                <div>
+                                    <dl class="full">
+                                        <dt>생년</dt>
+                                        <dd>
+                                            <div class="ipt">
+                                                <div>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>무관</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>00</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>01</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>02</span></label>
+                                                </div>
+                                                <div>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>03</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>04</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>05</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>06</span></label>
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl class="full">
+                                        <dt>학번</dt>
+                                        <dd>
+                                            <div class="ipt">
+                                                <div>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>무관</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>19</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>20</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>21</span></label>
+                                                </div>
+                                                <div>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>22</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>23</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>24</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>25</span></label>
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>흡연</dt>
+                                        <dd>
+                                            <div class="ipt">
+                                                <div>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>좋아</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>상의</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>싫어</span></label>
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>친구초대</dt>
+                                        <dd>
+                                            <div class="ipt">
+                                                <div>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>좋아</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>상의</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>싫어</span></label>
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>소음</dt>
+                                        <dd>
+                                            <div class="ipt">
+                                                <div>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>좋아</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>상의</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>싫어</span></label>
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>통화</dt>
+                                        <dd>
+                                            <div class="ipt">
+                                                <div>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>좋아</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>상의</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>싫어</span></label>
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>방안 식사</dt>
+                                        <dd>
+                                            <div class="ipt">
+                                                <div>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>좋아</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>상의</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>싫어</span></label>
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>방안 공부</dt>
+                                        <dd>
+                                            <div class="ipt">
+                                                <div>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>좋아</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>상의</span></label>
+                                                    <label class="type-chip s-sm"><input type="radio"><span>싫어</span></label>
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="" alt="체크리스트 이미지">
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="btn-wrap">
+                <button class="btn bg-primary full" onclick="window.location.href='html/auth/login-naver'">룸메이트 추천 받기</button>
+                <button class="btn bg-secondary full" id="download-btn">체크리스트 사진 다운받기</button>
+            </div>
+        </footer>
     </div>
 
-    <div class="labels">
-      <span>작음</span>
-      <span>중간</span>
-      <span>큼</span>
-    </div>
-  </div>
+    <script>
+    $(document).ready(function() {
+        let capturedImgData = '';
 
-  <script src="script.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-  const slider = document.getElementById('noiseSlider');
-  const emoji = document.getElementById('emoji');
+        // 페이지 로드 시 자동 캡처
+        function captureInfoWrap() {
+            html2canvas(document.querySelector('.info-wrap')).then(function(canvas) {
+                capturedImgData = canvas.toDataURL('image/png');
+                $('.result-image img').attr('src', capturedImgData);
+            });
+        }
 
-  // 슬라이더 값에 따라 이모지와 위치 변경
-  slider.addEventListener('input', function() {
-    const value = slider.value;
+        // 이미지 다운로드 기능
+        $('#download-btn').on('click', function() {
+            if (capturedImgData) {
+                const link = document.createElement('a');
+                link.href = capturedImgData;
+                link.download = '체크리스트.png';
+                link.click();
+            } else {
+                alert('이미지가 준비되지 않았습니다.');
+            }
+        });
 
-    // 슬라이더 값에 따른 이모지 변경
-    if (value == 0) {
-      emoji.textContent = '😶';  // 작음
-    } else if (value == 1) {
-      emoji.textContent = '🙂';  // 중간
-    } else if (value == 2) {
-      emoji.textContent = '😮';  // 큼
-    }
-
-    // 슬라이더 위치에 따라 이모지 이동
-    const max = slider.max;
-    const percentage = (value / max) * 100;
-    emoji.style.left = `calc(${percentage}% - 16px)`;
-  });
-});
-  </script>
+        // 페이지 로드 시 자동 실행
+        captureInfoWrap();
+        document.querySelector('.info-wrap').style.display = "none"
+    });
+    </script>
 </body>
 </html>
