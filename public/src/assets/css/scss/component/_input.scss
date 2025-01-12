@@ -125,6 +125,16 @@
                     background-color: v.$primary-500;
                     color: v.$white;
                 }
+                &.s-sm{
+                    font: 700 5px/normal v.$font-main;
+                    padding: 2px 4px;
+                    background-color: v.$black-100;
+                    color: v.$black-400;
+                    &:has(input:checked){
+                        background-color: v.$primary-200;
+                        color: v.$black-950;
+                    }
+                }
             }
             &-radio{
                 padding: 24px;

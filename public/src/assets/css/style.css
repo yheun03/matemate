@@ -238,6 +238,16 @@ http://scripts.sil.org/OFL
   background-color: #447eed;
   color: #ffffff;
 }
+.ipt label.type-chip.s-sm {
+  font: 700 5px/normal "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  padding: 2px 4px;
+  background-color: #e7e7e7;
+  color: #888888;
+}
+.ipt label.type-chip.s-sm:has(input:checked) {
+  background-color: #c2d9fb;
+  color: #111111;
+}
 .ipt label.type-radio {
   padding: 24px;
   border: 1px solid #e7e7e7;
@@ -527,6 +537,96 @@ http://scripts.sil.org/OFL
   font-weight: 700;
   color: #111111;
   margin-bottom: 8px;
+}
+.result-image .info-wrap {
+  position: relative;
+  padding: 7px 16px 16px;
+}
+.result-image .info-wrap::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  opacity: 0.2;
+  background: url("../../../src/assets//images/logo.png") center/cover no-repeat;
+  z-index: -1;
+}
+.result-image .info-wrap .info-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.result-image .info-wrap .info-header p.title {
+  font: 400 28px/normal "BagelFatOne";
+  letter-spacing: -0.01em;
+  color: #98c1f8;
+  display: flex;
+  flex-direction: column;
+}
+.result-image .info-wrap .info-header p.title span {
+  font-size: 18px;
+  margin-top: -8px;
+}
+.result-image .info-wrap .info-header table {
+  width: auto;
+}
+.result-image .info-wrap .info-header table th {
+  font: 700 7px/120% "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  color: #5d5d5d;
+}
+.result-image .info-wrap .info-header table td {
+  padding-inline: 6px;
+}
+.result-image .info-wrap .info-header table td .ipt > div {
+  justify-content: flex-start;
+}
+.result-image .info-wrap .info-body {
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+.result-image .info-wrap .info-body .ipt label {
+  font: 700 4px/normal "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  padding-inline: 2px;
+}
+.result-image .info-wrap .info-body p.title {
+  font: 400 10px/120% "BagelFatOne";
+  color: #888888;
+}
+.result-image .info-wrap .info-body > div > div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+.result-image .info-wrap .info-body > div.data-rm {
+  padding-left: 30px;
+  border-left: 1px dashed #98c1f8;
+}
+.result-image .info-wrap .info-body > div.data-rm > div {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.result-image .info-wrap .info-body > div.data-rm > div .full {
+  width: unset;
+  grid-column: span 2;
+}
+.result-image .info-wrap .info-body dl {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.result-image .info-wrap .info-body dl dt {
+  font: 700 5px/120% "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  color: #233985;
+  letter-spacing: -0.025em;
+}
+.result-image .info-wrap .info-body dl dd .ipt, .result-image .info-wrap .info-body dl dd .ipt > div {
+  gap: 2px;
+}
+.result-image .info-wrap .info-body dl dd .ipt > div {
+  justify-content: flex-start;
 }
 .result-match {
   position: relative;

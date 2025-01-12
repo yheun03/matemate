@@ -90,6 +90,113 @@
                 margin-bottom: 8px;
             }
         }
+        .info-wrap{
+            position: relative;
+            padding: 7px 16px 16px;
+            &::before{
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 80%;
+                height: 80%;
+                opacity: 0.2;
+                background: url(v.$url + '/images/logo.png') center/cover no-repeat;
+                z-index: -1;
+            }
+            .info{
+                &-header{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    p.title{
+                        font: 400 28px/normal "BagelFatOne";
+                        letter-spacing: -0.01em;
+                        color: v.$primary-300;
+                        display: flex;
+                        flex-direction: column;
+                        span{
+                            font-size: 18px;
+                            margin-top: -8px;
+                        }
+                    }
+                    table{
+                        width: auto;
+                        th{
+                            font: 700 7px/120% v.$font-main;
+                            color: v.$black-600;
+                        }
+                        td{
+                            padding-inline: 6px;
+                            .ipt>div{
+                                justify-content: flex-start;
+                            }
+                        }
+                    }
+                }
+                &-body{
+                    display: grid;
+                    grid-template-columns: 1fr auto;
+                    .ipt{
+                        label{
+                            font: 700 4px/normal v.$font-main;
+                            padding-inline: 2px;
+                        }
+                    }
+                    p.title{
+                        font: 400 10px/120% 'BagelFatOne';
+                        color: v.$black-400;
+                    }
+                    & > div{
+                        & > div{
+                            display: grid;
+                            grid-template-columns: repeat(3, 1fr);
+                            gap: 8px;
+                        }
+                        &.data-rm{
+                            padding-left: 30px;
+                            border-left: 1px dashed v.$primary-300;
+                            & > div{
+                                grid-template-columns: repeat(2, 1fr);
+                                gap: 20px;
+                                .full{
+                                    width: unset;
+                                    grid-column: span 2;
+                                }
+                            }
+                        }
+                    }
+                    dl{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 2px;
+                        // &,
+                        // & dd,
+                        // & .ipt,
+                        // & .ipt > div{
+                        //     // width: fit-content !important;
+                        // }
+                        dt{
+                            font: 700 5px/120% v.$font-main;
+                            color: v.$primary-900;
+                            letter-spacing: -0.025em;
+                        }
+                        dd{
+                            .ipt{
+                                &,
+                                & > div{
+                                    gap: 2px;
+                                }
+                                & > div{
+                                    justify-content: flex-start;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
     &-match{
         position: relative;
