@@ -59,10 +59,7 @@
             }
         }
         .btn{
-            margin-top: 24px;
-            &.type-text{
-                margin-top: 40px;
-            }
+            margin-top: 20px;
         }
         .u{
             &-photo{
@@ -82,7 +79,7 @@
 
     &-info{
         width: 100%;
-        margin-top: 60px;
+        margin-top: 48px;
         padding-block: 7px;
         border-radius: 10px;
         background-color: v.$primary-100;
