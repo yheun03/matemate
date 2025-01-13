@@ -96,11 +96,11 @@
         }
         p{
             &.title{
-                margin-inline: calc(2 / 375 * 100vw);
-                font: 600 calc(18 / 375 * 100vw)/calc(26 / 375 * 100vw) v.$font-main;
+                margin-inline: 2px;
+                font: 600 18px/26px v.$font-main;
                 font-weight: 700;
                 color: v.$black-950;
-                margin-bottom: calc(8 / 375 * 100vw);
+                margin-bottom: 8px;
             }
         }
         .info-wrap{

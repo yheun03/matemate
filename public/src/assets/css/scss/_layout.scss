@@ -90,3 +90,52 @@ section{
         }
     }
 }
+
+@media (min-width: 720px) {
+    body{
+        width: 100dvw;
+        height: 100dvh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #root{
+        position: relative;
+        max-width: 375px;
+        height: 100dvh;
+        max-height: 812px;
+        aspect-ratio: 375/812;
+    }
+    // form{
+    //     width: inherit;
+    //     height: inherit;
+    // }
+    .wrap-insert{
+        // position: unset;
+        // top: unset;
+        // left: unset;
+        // right: unset;
+        // bottom: unset;
+        // width: inherit;
+        // height: 100%;
+    }
+    .rm-match-section{
+        max-height: 815px;
+    }
+    .recommendation .alert-rm ul{
+        overflow-x: auto;
+        li:has(span:empty){
+            display: none;
+        }
+    }
+    .status-noti{
+        padding-top: unset;
+        max-height: 70dvh;
+        div{
+            margin-top: unset;
+        }
+        img{
+            margin-block: auto;
+        }
+    }
+}
