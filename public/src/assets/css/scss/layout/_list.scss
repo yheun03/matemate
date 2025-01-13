@@ -210,16 +210,18 @@
                     &.type{
                         &-accept{
                             color: v.$primary-500;
-                            &::after{
-                                content: "";
-                                @include v.setIcon('ic-arrow-right.svg', 20);
-                                background-size: 16px;
-                                filter: v.$set-primary-500;
-                                margin-left: 2px;
-                                margin-bottom: 1px;
-                            }
+                            font: 600 14px/140% v.$font-main;
+                            // &::after{
+                            //     content: "";
+                            //     @include v.setIcon('ic-arrow-right.svg', 20);
+                            //     background-size: 16px;
+                            //     filter: v.$set-primary-500;
+                            //     margin-left: 2px;
+                            //     margin-bottom: 1px;
+                            // }
                         }
                         &-delete{
+                            font: 600 14px/140% v.$font-main;
                             color: v.$error;
                         }
                     }

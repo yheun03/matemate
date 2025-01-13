@@ -1148,20 +1148,10 @@ footer:empty {
 }
 .list-result-match .btn-wrap .btn.type-accept {
   color: #447eed;
-}
-.list-result-match .btn-wrap .btn.type-accept::after {
-  content: "";
-  display: block;
-  width: 20px !important;
-  height: 20px !important;
-  aspect-ratio: 1;
-  background: url("../../../src/assets/icons/20/ic-arrow-right.svg") center no-repeat;
-  background-size: 16px;
-  filter: invert(45%) sepia(81%) saturate(487%) hue-rotate(182deg) brightness(92%) contrast(101%);
-  margin-left: 2px;
-  margin-bottom: 1px;
+  font: 600 14px/140% "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
 .list-result-match .btn-wrap .btn.type-delete {
+  font: 600 14px/140% "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   color: #EB5757;
 }
 .list-setting p {
@@ -1406,4 +1396,33 @@ section .tab a.active::before {
 }
 .updateUser .ipt textarea {
   height: 30dvh;
+}
+
+.policy section {
+  padding-inline: 20px;
+}
+.policy h1 {
+  font: 600 20px/140% "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  color: #111111;
+}
+.policy h1 ~ h1 {
+  margin-top: 24px;
+}
+.policy h2 {
+  font: 600 18px/140% "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  color: #111111;
+  margin-top: 16px;
+}
+.policy p {
+  font: 400 16px/26px "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  color: #111111;
+  margin-top: 8px;
+}
+.policy ul {
+  margin-top: 4px;
+  font: 400 14px/140% "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+.policy ul li {
+  list-style: initial;
+  margin-left: 20px;
 }/*# sourceMappingURL=style.css.map */
