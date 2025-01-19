@@ -46,6 +46,7 @@ $font-main: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont
 
 
     $new-b2-400         : 400 16px/130% $font-main;
+    $new-b2-500         : 500 16px/normal $font-main;
     $new-b3-400         : 400 14px/140% $font-main;
     $new-b3-600         : 600 14px/140% $font-main;
     $new-b4-500         : 500 12px/normal $font-main;
@@ -55,6 +56,8 @@ $font-main: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont
     $shadow             : 0 1px 2px 0 rgba(#000000, 0.15);
 
 // 색상들
+    // 기숙사점수 여자
+        $girl           : #FFD3D6;
     // 기본색상
         $white          : #ffffff;
 
