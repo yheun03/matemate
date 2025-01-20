@@ -464,3 +464,74 @@
         }
     }
 }
+
+.formula{
+    padding-inline: 20px;
+    p{
+        color: v.$black-950;
+        letter-spacing: -0.25px;
+        &.title{
+            font: v.$new-b1-700;
+            padding-bottom: 5px;
+        }
+    }
+    div{
+        padding-block: 34px;
+        box-shadow: v.$shadow;
+        border-radius: 10px;
+        p{
+            font: v.$new-b2-600;
+            text-align: center;
+        }
+    }
+}
+.main-cutline{
+    section{
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+    }
+    .dscpt-information{
+        margin-inline: 20px;
+    }
+}
+.cutline-chart{
+    padding-inline: 20px;
+    margin-top: 30px;
+    p.title{
+        font: v.$new-b1-700;
+        color: v.$black-950;
+        letter-spacing: -0.25px;
+    }
+    .wrap{
+        box-shadow: v.$shadow;
+        box-shadow: inset 14px 0 0 white;
+        width: 100%;
+        height: 225px;
+        canvas {
+            display: block;
+            width: 100% !important;
+            height: 100% !important;
+        }
+    }
+}
+.gotoCutline{
+    display: flex;
+    padding-inline: 20px;
+    gap: 15px;
+    align-items: center;
+    a{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-block: 29px 34px;
+        box-shadow: v.$shadow;
+        border-radius: 10px;
+        font: 600 16px/140% v.$font-main;
+        color: v.$black-600;
+        text-align: center;
+        flex: 1;
+        img{
+            width: 80px;
+        }
+    }
+}

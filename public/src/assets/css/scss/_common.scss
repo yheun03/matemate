@@ -36,6 +36,9 @@
             color: v.$error;
             @include v.setBg('ic-error.svg', 18);
         }
+        &.text-alert::before{
+            content: "주의";
+        }
     }
     &.type-inline{
         padding-top: unset;
