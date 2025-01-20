@@ -27,6 +27,9 @@ header{
             &-arrow-left::before{
                 @include v.setIcon('ic-arrow-left.svg', 28);
             }
+            &-search::before{
+                @include v.setIcon('ic-search.svg', 28);
+            }
         }
     }
     h1{

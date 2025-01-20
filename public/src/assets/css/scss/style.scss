@@ -352,3 +352,42 @@
         border-radius: 5px;
     }
 }
+
+
+.board{
+    &-hot{
+        border: solid v.$black-200;
+        border-width: 1px 0;
+        .swiper-slide{
+            a{
+                display: flex;
+                align-items: center;
+                padding: 8px 20px;
+                &::before{
+                    content: "";
+                    @include v.setIcon('ic-fire.svg', 24);
+                }
+            }
+            p{
+                flex: 1;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                font: v.$new-b4-500;
+                letter-spacing: -0.25px;
+                color: v.$black-950;
+                padding: 8.5px 25px;
+                background-color: #FCEAEB;
+                border-radius: 8px;
+                margin-left: 8px;
+            }
+        }
+    }
+    &-list-info{
+        font: v.$new-b4-500;
+        color: v.$black-600;
+        span + span::before{
+            content: '| ';
+        }
+    }
+}
