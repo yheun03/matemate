@@ -304,6 +304,73 @@
             margin-top: 16px;
         }
     }
+    &-recommand-wrap{
+        padding-inline: 30px;
+        margin-top: 16px;
+        p.title{
+            font: v.$new-b1-700;
+            color: v.$black-950;
+            letter-spacing: -0.25px;
+        }
+        ul{
+            display: flex;
+            overflow: auto;
+            li{
+                padding: 16px 18px;
+                a{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    .btn{
+                        font: v.$btn5-600;
+                        color: v.$secondary-600;
+                        letter-spacing: -0.25px;
+                        height: unset;
+                        padding: 5px 11px;
+                        border-radius: 30px;
+                        &-wrap{
+                            margin-top: 16px;
+                        }
+                        &.bg-primary{
+                            background-color: #4880ED;
+                            border-color: #4880ED;
+                            color: white;
+                        }
+                    }
+                }
+                p{
+                    font: v.$new-b2-600;
+                    color: v.$black-950;
+                    letter-spacing: -0.25px;
+                    margin-block: 15px 1px;
+                }
+                strong{
+                    font: v.$new-b2-700;
+                    color: #4880ED;
+                    letter-spacing: -0.25px;
+                }
+            }
+            img{
+                width: 84px;
+                aspect-ratio: 1;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
+        & > .btn-wrap{
+            margin-top: 12px;
+            .btn{
+                font: v.$new-btn5-600;
+                color: v.$black-950;
+                height: 46px;
+                border: unset;
+                border-radius: 10px;
+                box-shadow: v.$shadow;
+                flex: 1;
+            }
+        }
+    }
 }
 
 .full{
