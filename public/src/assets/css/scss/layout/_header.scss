@@ -21,6 +21,10 @@ header{
             &-setting::before{
                 @include v.setIcon('ic-setting.svg', 28);
             }
+            &-chat::before{
+                @include v.setIcon('ic-chat.svg', 28);
+                background-size: 26px;
+            }
             &-bell::before{
                 @include v.setIcon('ic-bell.svg', 28);
             }
