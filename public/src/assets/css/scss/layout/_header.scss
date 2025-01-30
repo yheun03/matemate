@@ -28,6 +28,16 @@ header{
             &-bell::before{
                 @include v.setIcon('ic-bell.svg', 28);
             }
+            &-bell.active::after{
+                content: "";
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                position: absolute;
+                top: 4px;
+                right: 4px;
+                background-color: v.$error;
+            }
             &-arrow-left::before{
                 @include v.setIcon('ic-arrow-left.svg', 28);
             }
