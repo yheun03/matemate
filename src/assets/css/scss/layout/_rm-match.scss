@@ -1,0 +1,110 @@
+@charset 'utf-8';
+@use '../index' as v;
+
+.rm-match{
+    &-wrap{
+        .title{
+            flex: 0 0 162px;
+            font: v.$h1-700;
+            color: v.$black-950;
+            align-content: center;
+            & + div{
+                flex: 1;
+            }
+        }
+    }
+    &-section{
+        padding: 32px 24px 24px;
+        height: 100dvh;
+        display: flex;
+        flex-direction: column;
+        .btn{
+            &-wrap{
+                padding-top: 20px;
+                .btn{
+                    flex: 1;
+                }
+            }
+        }
+        & > div{
+            &:has(.ipt:only-child){
+                align-content: center;
+            }
+        }
+
+        .type-radio{
+            & + textarea{
+                display: none;
+                height: 25dvh;
+                margin-top: 12px;
+                padding-inline: 8px;
+            }
+            &:has(input:checked) + textarea{
+                display: block;
+            }
+        }
+    }
+
+    // 매칭 결과 페이지
+    &-result{
+        padding-inline: 20px;
+        justify-items: center;
+        p.title{
+            font: v.$h6-500;
+            color: v.$black-950;
+            letter-spacing: -0.25px;
+            text-align: center;
+            span{
+                font-weight: 700;
+            }
+        }
+        .btn{
+            margin-top: 20px;
+        }
+        .u{
+            &-photo{
+                width: 120px;
+                aspect-ratio: 1;
+                border-radius: 50%;
+                object-fit: contain;
+                margin: 16px auto;
+            }
+            &-faculty,
+            &-major{
+                text-align: center;
+                font: v.$h6-600;
+            }
+        }
+    }
+
+    &-info{
+        width: 100%;
+        margin-top: 48px;
+        padding-block: 7px;
+        border-radius: 10px;
+        background-color: v.$primary-100;
+        dl{
+            width: 100%;
+            padding: 7px 24px;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            font: v.$b0-600;
+            color: v.$black-950;
+            dd{
+                text-align: right;
+            }
+        }
+    }
+}
+.wrap-insert{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    .title{
+        & + div{
+            flex: 1;
+            overflow-y: auto;
+        }
+    }
+}
