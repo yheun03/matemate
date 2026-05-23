@@ -1,7 +1,17 @@
 {
+  "name": "matemate",
+  "version": "1.0.0",
+  "private": true,
+  "description": "한국공학대학교 기숙사 룸메이트 매칭 서비스 MATEMATE",
+  "scripts": {
+    "deploy": "gh-pages -d public --dotfiles"
+  },
   "dependencies": {
     "firebase": "^11.1.0",
     "firebase-functions": "^6.2.0",
     "jquery": "^3.7.1"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
